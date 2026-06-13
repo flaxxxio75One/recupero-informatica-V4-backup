@@ -1,1 +1,1 @@
-Carica su GitHub sostituendo i vecchi file: index.html, style.css, app.js, data.js, manifest.webmanifest. Poi fai Commit changes e attendi 1-2 minuti. Se iPhone non aggiorna, apri il link con ?v=2 alla fine.
+
