@@ -1,0 +1,10 @@
+{
+  "name": "Arianna Recupero Informatica V4 Cloud",
+  "short_name": "Recupero Info V4 Cloud",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#245c3b",
+  "description": "Web app DSA con quiz, report e simulazione esame",
+  "icons": []
+}

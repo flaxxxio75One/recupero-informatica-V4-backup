@@ -1,0 +1,19 @@
+AGGIORNAMENTO V3
+
+Novità:
+- Sezione Backup.
+- Esporta progressi in file JSON.
+- Importa progressi da file JSON.
+- Copia backup negli appunti.
+- Migrazione automatica dei dati dalla V2 alla V3, se presenti nello stesso browser.
+
+File da caricare su GitHub sostituendo i vecchi:
+- index.html
+- style.css
+- app.js
+- data.js
+- manifest.webmanifest
+
+Dopo il commit:
+- attendi 1-2 minuti;
+- apri il link con ?v=3 alla fine se iPhone mostra ancora la vecchia versione.

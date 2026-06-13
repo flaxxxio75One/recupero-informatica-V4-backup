@@ -1,0 +1,57 @@
+CONFIGURAZIONE FIREBASE V4
+
+1. Vai su:
+   https://console.firebase.google.com
+
+2. Crea progetto:
+   Nome consigliato: arianna-recupero-informatica
+
+3. Aggiungi app Web:
+   - Clicca icona </> Web
+   - Nome app: Arianna Recupero Informatica
+   - Copia firebaseConfig
+
+4. Apri il file firebase-config.js
+   - Incolla i dati dentro firebaseConfig
+   - cambia enabled: false in enabled: true
+
+5. Attiva Authentication:
+   - Firebase Console > Authentication > Get started
+   - Sign-in method
+   - Anonymous
+   - Enable
+
+6. Attiva Firestore:
+   - Firebase Console > Firestore Database
+   - Create database
+   - Start in production mode oppure test mode
+   - Regione: europe-west o default
+
+7. Regole Firestore consigliate per uso semplice privato:
+   Vai su Firestore Database > Rules e incolla:
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /students/{studentId}/progress/{docId} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+8. Ricarica su GitHub questi file:
+   - index.html
+   - style.css
+   - app.js
+   - data.js
+   - manifest.webmanifest
+   - firebase-config.js
+
+9. Apri il link con:
+   ?v=4
+
+NOTE IMPORTANTI:
+- La sincronizzazione è automatica dopo ogni modifica.
+- C'è anche il tasto Sincronizza ora.
+- Il backup JSON resta disponibile come sicurezza.
+- Se usi più dispositivi, apri l'app e premi Sincronizza ora.
