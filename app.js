@@ -2,8 +2,6 @@ const storeKey="arianna_recupero_app_v4";let state=loadState();let currentExam=[
 try{
   const v3 = localStorage.getItem(storeKey);
   if(v3) return {...defaultState(),...JSON.parse(v3)};
-  const v3 = localStorage.getItem("arianna_recupero_app_v3");
-  if(v3) return {...defaultState(),...JSON.parse(v3)};
   const v2 = localStorage.getItem("arianna_recupero_app_v2");
   if(v2) return {...defaultState(),...JSON.parse(v2)};
   return defaultState();
