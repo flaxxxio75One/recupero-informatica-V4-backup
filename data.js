@@ -3163,165 +3163,353 @@ const LESSONS = [
   {
     "id": 20,
     "date": "Modulo 20",
-    "title": "Simulazione esame Sereni: domande miste",
-    "area": "Ripasso",
-    "goal": "Allenarsi alle domande miste più probabili dell'esame di recupero.",
+    "title": "Simulazione finale Sereni: prova mista completa",
+    "area": "Esame",
+    "goal": "Allenarsi con domande realistiche su tutto il programma di Informatica del primo anno.",
     "theory": [
-      "La simulazione finale serve a ripassare tutti gli argomenti principali come se fosse una piccola prova d'esame.",
-      "Le domande possono riguardare fondamenti, Office, Internet, sicurezza, algoritmi e diagrammi di flusso.",
-      "Per rispondere bene usa sempre lo schema: definizione semplice, funzione, esempio pratico.",
-      "Se non ricordi una frase perfetta, parti dalla parola chiave e fai un esempio: spesso basta per dimostrare che hai capito.",
-      "Dopo ogni simulazione bisogna guardare gli errori e ripassare solo gli argomenti deboli."
+      "La simulazione finale ripassa tutti gli argomenti più probabili dell'esame di recupero: fondamenti, Office, Internet, sicurezza, algoritmi e diagrammi di flusso.",
+      "Non basta ricordare una parola: all'orale conviene rispondere con definizione, funzione ed esempio pratico.",
+      "Le domande possono essere teoriche, pratiche o miste: per esempio 'spiega Excel' oppure 'quale formula uso per calcolare una media?'.",
+      "Quando una domanda sembra difficile, cerca prima la parola chiave: RAM, SSD, browser, phishing, algoritmo, rombo, SOMMA.",
+      "Alla fine della simulazione bisogna segnare gli argomenti sbagliati e ripassare solo quelli: così lo studio diventa più efficace."
     ],
     "detail": [
-      "Strategia orale: non rispondere con una sola parola. Esempio: 'La RAM è memoria temporanea, serve mentre il computer lavora, quando spengo si svuota'.",
-      "Strategia quiz: leggere tutte le risposte prima di scegliere. Molti errori nascono dalla fretta.",
-      "Strategia pratica: in Word, Excel e PowerPoint conta l'ordine: apri, crea, formatta/calcola, controlla, salva.",
-      "Strategia algoritmi: cerca input, elaborazione e output. Nei diagrammi scegli il simbolo corretto.",
-      "Ultimo ripasso: RAM temporanea, SSD permanente, browser naviga, Google cerca, Excel calcola, Word scrive, PowerPoint presenta, phishing inganna."
+      "Esempio di risposta completa: 'La RAM è una memoria temporanea. Serve al computer mentre lavora. Quando spengo il computer si svuota'.",
+      "Esempio di risposta completa su Excel: 'Excel è un foglio elettronico. Serve per organizzare dati, fare calcoli automatici e creare grafici. Per esempio posso calcolare la media delle temperature di una serra'.",
+      "Esempio di risposta completa su Internet: 'Internet è una rete mondiale di dispositivi collegati. Il web è l'insieme dei siti. Il browser è il programma che uso per navigare'.",
+      "Esempio di risposta completa su sicurezza: 'Il phishing è una truffa online che usa messaggi falsi per rubare dati, password o soldi'.",
+      "Esempio di risposta completa su algoritmi: 'Un algoritmo è una sequenza ordinata di istruzioni per risolvere un problema. Ha input, elaborazione e output'.",
+      "Errore da evitare: rispondere solo con una parola. Meglio una frase breve ma completa."
     ],
     "map": [
-      "ESAME",
-      "Definizione",
-      "Funzione",
-      "Esempio",
-      "Quiz misti",
-      "Errori",
-      "Ripasso mirato",
-      "Calma"
+      "SIMULAZIONE FINALE",
+      "Fondamenti",
+      "Hardware/Software",
+      "Word/Excel/PowerPoint",
+      "Internet/Reti",
+      "Sicurezza",
+      "Algoritmi",
+      "Diagrammi di flusso",
+      "Risposte complete"
     ],
     "oral": [
       [
-        "Come rispondi a una domanda orale?",
-        "Do definizione, dico a cosa serve e faccio un esempio."
+        "Spiega la differenza tra hardware e software.",
+        "L'hardware sono le parti fisiche del computer, come monitor, tastiera e mouse. Il software sono i programmi, come Windows, Word ed Excel."
       ],
       [
-        "Cosa fai se ti blocchi?",
-        "Riparto dalla parola chiave e uso un esempio semplice."
+        "Che differenza c'è tra RAM e SSD?",
+        "La RAM è temporanea e si svuota quando spengo il computer. L'SSD è permanente e conserva file e programmi."
       ],
       [
-        "Quali argomenti sono più importanti?",
-        "Hardware/software, memorie, Word, Excel, Internet, sicurezza, algoritmi e diagrammi."
+        "Cos'è un sistema operativo?",
+        "È il programma principale che gestisce il computer, l'hardware, i file e le applicazioni. Esempi: Windows, macOS, Android e iOS."
       ],
       [
-        "Come correggi gli errori della simulazione?",
-        "Guardo l'area debole e ripasso teoria, mappa e quiz."
+        "Cos'è una cartella?",
+        "È un contenitore digitale che serve a organizzare file e documenti."
       ],
       [
-        "Qual è la differenza RAM/SSD?",
-        "RAM temporanea, SSD permanente."
+        "A cosa serve Word?",
+        "Word serve per creare e formattare documenti, relazioni, lettere e testi scolastici."
       ],
       [
-        "Qual è lo schema degli algoritmi?",
-        "Input, elaborazione, output."
+        "A cosa serve Excel?",
+        "Excel serve per organizzare dati, fare calcoli automatici e creare grafici."
+      ],
+      [
+        "A cosa serve PowerPoint?",
+        "PowerPoint serve per creare presentazioni formate da slide, con titoli, testo, immagini e grafici."
+      ],
+      [
+        "Differenza tra Internet, Web, Browser e Google.",
+        "Internet è la rete mondiale; il Web è l'insieme dei siti; il browser è il programma per navigare; Google è un motore di ricerca."
+      ],
+      [
+        "Cos'è il phishing?",
+        "È una truffa online che usa messaggi falsi per rubare dati personali, password o soldi."
+      ],
+      [
+        "Cos'è un algoritmo?",
+        "È una sequenza ordinata di istruzioni per risolvere un problema o raggiungere un obiettivo."
+      ],
+      [
+        "Quali sono input, elaborazione e output?",
+        "Input sono i dati che entrano, elaborazione è il lavoro svolto, output è il risultato finale."
+      ],
+      [
+        "Nel diagramma di flusso, cosa indicano ovale, rettangolo, rombo e parallelogramma?",
+        "Ovale: inizio/fine. Rettangolo: elaborazione. Rombo: decisione. Parallelogramma: input/output."
       ]
     ],
     "quiz": [
       {
-        "q": "Schema migliore per l'orale:",
+        "q": "Quale coppia è corretta?",
         "options": [
-          "Definizione, funzione, esempio",
-          "Solo una parola",
-          "Frase lunga a memoria"
+          "Hardware = parti fisiche, Software = programmi",
+          "Hardware = programmi, Software = cavi",
+          "Hardware = Internet, Software = monitor"
         ],
         "a": 0
       },
       {
-        "q": "RAM è:",
+        "q": "La CPU serve principalmente a:",
         "options": [
-          "Temporanea",
-          "Permanente",
-          "Browser"
+          "Eseguire istruzioni ed elaborare dati",
+          "Conservare per sempre i file",
+          "Mostrare immagini come un monitor"
         ],
         "a": 0
       },
       {
-        "q": "SSD è:",
+        "q": "La RAM è:",
         "options": [
+          "Memoria temporanea",
           "Memoria permanente",
-          "Motore di ricerca",
-          "Input"
+          "Motore di ricerca"
+        ],
+        "a": 0
+      },
+      {
+        "q": "L'SSD serve a:",
+        "options": [
+          "Conservare dati e programmi anche a computer spento",
+          "Cancellare la RAM",
+          "Navigare su Internet"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Windows è:",
+        "options": [
+          "Sistema operativo",
+          "Foglio elettronico",
+          "Periferica di output"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una cartella serve a:",
+        "options": [
+          "Organizzare file",
+          "Fare calcoli automatici",
+          "Proteggere dal phishing"
+        ],
+        "a": 0
+      },
+      {
+        "q": "L'estensione .docx indica:",
+        "options": [
+          "Documento Word",
+          "Foglio Excel",
+          "Presentazione PowerPoint"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Copia e taglia sono diverse perché:",
+        "options": [
+          "Copia duplica, taglia sposta",
+          "Copia cancella, taglia stampa",
+          "Sono la stessa cosa"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Word serve soprattutto per:",
+        "options": [
+          "Scrivere e formattare documenti",
+          "Fare formule matematiche automatiche",
+          "Collegare reti LAN"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Formattare un testo significa:",
+        "options": [
+          "Cambiarne l'aspetto",
+          "Collegarlo al Wi-Fi",
+          "Trasformarlo in virus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Excel è:",
+        "options": [
+          "Un foglio elettronico",
+          "Un programma di videoscrittura",
+          "Un motore di ricerca"
+        ],
+        "a": 0
+      },
+      {
+        "q": "In Excel una cella è:",
+        "options": [
+          "L'incrocio tra riga e colonna",
+          "Una password",
+          "Un'immagine"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La formula =SOMMA(A1:A5):",
+        "options": [
+          "Somma i valori da A1 ad A5",
+          "Calcola il valore più basso",
+          "Crea una slide"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La funzione MEDIA serve a:",
+        "options": [
+          "Calcolare il valore medio",
+          "Trovare solo il valore massimo",
+          "Scrivere in grassetto"
+        ],
+        "a": 0
+      },
+      {
+        "q": "MAX e MIN servono a:",
+        "options": [
+          "Trovare valore più alto e più basso",
+          "Cambiare colore al testo",
+          "Creare cartelle"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un grafico a linee è utile per:",
+        "options": [
+          "Mostrare un andamento nel tempo",
+          "Scrivere una relazione",
+          "Conservare file"
+        ],
+        "a": 0
+      },
+      {
+        "q": "PowerPoint serve per:",
+        "options": [
+          "Creare presentazioni",
+          "Calcolare medie",
+          "Gestire password"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Internet è:",
+        "options": [
+          "Una rete mondiale",
+          "Un browser",
+          "Un file Word"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il browser serve a:",
+        "options": [
+          "Navigare sul web",
+          "Calcolare formule",
+          "Proteggere sempre dalle truffe"
         ],
         "a": 0
       },
       {
         "q": "Google è:",
         "options": [
-          "Motore di ricerca",
-          "Internet intero",
-          "Sistema operativo"
+          "Un motore di ricerca",
+          "Un sistema operativo",
+          "Una memoria RAM"
         ],
         "a": 0
       },
       {
-        "q": "Browser serve a:",
+        "q": "Una LAN è:",
         "options": [
-          "Navigare",
-          "Fare solo medie",
-          "Stampare"
+          "Una rete locale",
+          "Una formula Excel",
+          "Un tipo di file immagine"
         ],
         "a": 0
       },
       {
-        "q": "Excel serve a:",
+        "q": "Il router serve a:",
         "options": [
-          "Dati e calcoli",
-          "Solo lettere",
-          "Solo virus"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Word serve a:",
-        "options": [
+          "Distribuire la connessione ai dispositivi",
           "Scrivere documenti",
-          "Collegare reti",
-          "Fare phishing"
+          "Fare grafici a torta"
         ],
         "a": 0
       },
       {
-        "q": "PowerPoint serve a:",
+        "q": "Una password sicura deve essere:",
         "options": [
-          "Creare presentazioni",
-          "Gestire RAM",
-          "Proteggere password"
+          "Lunga, non ovvia e diversa per ogni servizio",
+          "123456",
+          "Il proprio nome"
         ],
         "a": 0
       },
       {
-        "q": "Phishing è:",
+        "q": "Il backup è:",
         "options": [
-          "Truffa per rubare dati",
-          "Formula Excel",
-          "Grafico"
+          "Una copia di sicurezza",
+          "Una truffa online",
+          "Una formula Excel"
         ],
         "a": 0
       },
       {
-        "q": "Algoritmo è:",
+        "q": "Il phishing è:",
         "options": [
-          "Sequenza ordinata di istruzioni",
-          "Stampante",
-          "File immagine"
+          "Un inganno per rubare dati",
+          "Un grafico a torta",
+          "Una cartella"
         ],
         "a": 0
       },
       {
-        "q": "Nel diagramma il rombo indica:",
+        "q": "Un malware è:",
+        "options": [
+          "Software dannoso",
+          "Un file sempre sicuro",
+          "Un tipo di tastiera"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un algoritmo è:",
+        "options": [
+          "Una sequenza ordinata di istruzioni",
+          "Una stampante",
+          "Un indirizzo email"
+        ],
+        "a": 0
+      },
+      {
+        "q": "In un algoritmo, l'input è:",
+        "options": [
+          "Il dato che entra",
+          "Il risultato finale",
+          "La freccia del diagramma"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Nel diagramma di flusso il rombo indica:",
         "options": [
           "Decisione",
-          "Inizio",
-          "Calcolo sempre"
+          "Inizio/Fine",
+          "Output sempre"
         ],
         "a": 0
       },
       {
-        "q": "Se sbaglio un quiz devo:",
+        "q": "Nel diagramma di flusso il rettangolo indica:",
         "options": [
-          "Ripassare l'area debole",
-          "Ignorarlo",
-          "Azzerare tutto"
+          "Elaborazione",
+          "Decisione",
+          "Motore di ricerca"
         ],
         "a": 0
       }

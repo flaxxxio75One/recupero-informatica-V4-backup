@@ -22,7 +22,15 @@ try{
   render();
 
   toast("Data esame aggiornata");
-};$("exportBtn").onclick=exportProgress;$("copyBackupBtn").onclick=copyBackup;$("importFile").onchange=importProgress;$("syncNowBtn").onclick=syncNow;$("pullCloudBtn").onclick=pullCloud;$("pushCloudBtn").onclick=pushCloud;$("toggleDetail").onclick=toggleDetail;initTutor();document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>switchTab(b.dataset.tab,b));window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;$("installBtn").classList.remove("hidden")});$("installBtn").onclick=async()=>{if(deferredPrompt){deferredPrompt.prompt();deferredPrompt=null;$("installBtn").classList.add("hidden")}};render()}function render(){if(!state.profileReady){$("loginScreen").classList.remove("hidden");$("appScreen").classList.add("hidden");$("studentName").value=state.name;$("examDate").value=state.examDate;return}$("loginScreen").classList.add("hidden");$("appScreen").classList.remove("hidden");const l=lesson();$("lessonTitle").textContent=`Giorno ${l.id} · ${l.title}`;$("lessonGoal").textContent=l.goal;$("daysLeft").textContent=daysLeft();const pct=Math.round(state.completed.length/LESSONS.length*100);$("progressLabel").textContent=`${pct}% completato`;$("progressBar").style.width=pct+"%";$("stars").textContent=state.stars;$("doneCount").textContent=state.completed.length;$("avgScore").textContent=averageScore()+"%";$("examGrade").textContent=lastExamGrade();renderTheory(l);renderMap(l);renderQuiz(l);renderPlan();renderChart();renderReport()}function daysLeft(){const today=new Date();today.setHours(0,0,0,0);const exam=new Date(state.examDate+"T00:00:00");return Math.max(0,Math.ceil((exam-today)/86400000))}function averageScore(){const vals=Object.values(state.scores);if(!vals.length)return 0;return Math.round(vals.reduce((a,b)=>a+b,0)/vals.length)}function lastExamGrade(){if(!state.examHistory.length)return "—";return state.examHistory[state.examHistory.length-1].grade.toFixed(1)}function renderTheory(l){$("theoryBox").innerHTML=l.theory.map(x=>`<div class="theory-item">${escapeHtml(x)}</div>`).join("");$("detailBox").classList.add("hidden");$("toggleDetail").textContent="Apri spiegazione dettagliata";$("detailBox").innerHTML=l.detail.map(x=>`<div class="detail-item">${escapeHtml(x)}</div>`).join("")}function toggleDetail(){const b=$("detailBox");b.classList.toggle("hidden");$("toggleDetail").textContent=b.classList.contains("hidden")?"Apri spiegazione dettagliata":"Chiudi spiegazione dettagliata"}function renderMap(l){$("mapBox").innerHTML=l.map.map((x,i)=>`<div class="map-node">${i?"→ ":""}${escapeHtml(x)}</div>`).join("")}function renderQuiz(l){$("quizResult").textContent="";$("quizBox").innerHTML=l.quiz.map((q,qi)=>`<div class="quiz-q"><p>${qi+1}. ${escapeHtml(q.q)}</p>${q.options.map((o,oi)=>`<label><input type="radio" name="q${qi}" value="${oi}"> ${escapeHtml(o)}</label>`).join("")}</div>`).join("")}function renderPlan(){$("planBox").innerHTML=LESSONS.map(l=>{const done=state.completed.includes(l.id);const score=state.scores[l.id]!=null?` · Quiz ${state.scores[l.id]}%`:"";return`<div class="plan-item ${done?"done":""}" onclick="goLesson(${l.id})"><div><b>Giorno ${l.id}</b> · ${escapeHtml(l.date)}<br>${escapeHtml(l.title)} <small>${score}</small></div><span class="badge">${done?"Fatto ⭐":"Da fare"}</span></div>`}).join("")}function renderChart(){const vals=LESSONS.map(l=>state.scores[l.id]??0).slice(0,14);$("chartBars").innerHTML=vals.map(v=>`<div class="bar" title="${v}%" style="height:${Math.max(4,v)}%"></div>`).join("")}function goLesson(id){state.current=id;saveState();render();window.scrollTo({top:0,behavior:"smooth"})}window.goLesson=goLesson;function completeLesson(){if(!state.completed.includes(state.current)){state.completed.push(state.current);state.stars+=1}if(state.current<LESSONS.length)state.current+=1;saveState();render();toast("Lezione completata. Stella guadagnata ⭐")}function checkQuiz(){const l=lesson();let correct=0;l.quiz.forEach((q,qi)=>{const selected=document.querySelector(`input[name="q${qi}"]:checked`);if(selected&&Number(selected.value)===q.a)correct++;else markWeak(l.area)});const score=Math.round(correct/l.quiz.length*100);state.scores[l.id]=score;if(score>=80&&!state.completed.includes(l.id)){state.stars+=1}saveState();renderChart();renderPlan();renderReport();$("avgScore").textContent=averageScore()+"%";$("quizResult").innerHTML=score>=80?`<span class="good">Ottimo: ${score}% · ${correct}/${l.quiz.length}</span>`:score>=60?`<span class="mid">Sufficiente ma da rinforzare: ${score}% · ${correct}/${l.quiz.length}</span>`:`<span class="bad">Da ripassare: ${score}% · ${correct}/${l.quiz.length}</span>`}function markWeak(area){state.weak[area]=(state.weak[area]||0)+1}function startExam(){const pool=LESSONS.flatMap(l=>l.quiz.map(q=>({...q,area:l.area,lesson:l.title})));currentExam=shuffle(pool).slice(0,10);$("examBox").innerHTML=currentExam.map((q,qi)=>`<div class="exam-q"><p>${qi+1}. ${escapeHtml(q.q)} <small>(${escapeHtml(q.area)})</small></p>${q.options.map((o,oi)=>`<label><input type="radio" name="e${qi}" value="${oi}"> ${escapeHtml(o)}</label>`).join("")}</div>`).join("");$("examResult").innerHTML="";toast("Simulazione avviata")}function gradeExam(){if(!currentExam.length){toast("Prima avvia una simulazione");return}let correct=0;const areaStats={};currentExam.forEach((q,qi)=>{areaStats[q.area]=areaStats[q.area]||{ok:0,tot:0};areaStats[q.area].tot++;const selected=document.querySelector(`input[name="e${qi}"]:checked`);if(selected&&Number(selected.value)===q.a){correct++;areaStats[q.area].ok++}else markWeak(q.area)});const percent=Math.round(correct/currentExam.length*100);const grade=Math.max(4,Math.round((4+percent/100*6)*10)/10);state.examHistory.push({date:new Date().toISOString(),percent,grade,areaStats});if(grade>=6)state.stars+=2;saveState();renderReport();$("examGrade").textContent=grade.toFixed(1);$("examResult").innerHTML=`<h3>Voto finale: ${grade.toFixed(1)}/10</h3><p>${correct}/10 corrette · ${percent}%</p>`+renderAreaStats(areaStats)}function renderAreaStats(stats){return Object.entries(stats).map(([area,s])=>{const p=Math.round(s.ok/s.tot*100);return`<div class="area-row"><b>${escapeHtml(area)} · ${p}%</b>${s.ok}/${s.tot} corrette<div class="area-bar"><div style="width:${p}%"></div></div></div>`}).join("")}function renderReport(){const byArea={};LESSONS.forEach(l=>{if(state.scores[l.id]!=null){byArea[l.area]=byArea[l.area]||[];byArea[l.area].push(state.scores[l.id])}});let html="<h3>Situazione per area</h3>";if(!Object.keys(byArea).length)html+="<p>Fai almeno un quiz per vedere il report.</p>";Object.entries(byArea).forEach(([area,vals])=>{const avg=Math.round(vals.reduce((a,b)=>a+b,0)/vals.length);const cls=avg>=80?"good":avg>=60?"mid":"bad";html+=`<div class="area-row"><b class="${cls}">${escapeHtml(area)} · ${avg}%</b><div class="area-bar"><div style="width:${avg}%"></div></div></div>`});const weak=Object.entries(state.weak).sort((a,b)=>b[1]-a[1]).slice(0,3);html+="<h3>Punti da rinforzare</h3>";html+=weak.length?weak.map(([a,n])=>`<p>⚠️ <b>${escapeHtml(a)}</b>: ${n} errori registrati. Ripassare mappe e spiegazione dettagliata.</p>`).join(""):"<p>Nessun punto debole registrato.</p>";html+="<h3>Punti forti</h3>";const strong=Object.entries(byArea).map(([a,v])=>[a,Math.round(v.reduce((x,y)=>x+y,0)/v.length)]).filter(x=>x[1]>=80);html+=strong.length?strong.map(([a,p])=>`<p>✅ <b>${escapeHtml(a)}</b>: ${p}% medio.</p>`).join(""):"<p>Completa altri quiz per individuare i punti forti.</p>";$("reportBox").innerHTML=html}function resetAll(){if(confirm("Vuoi azzerare profilo, stelle, quiz, esami e completamenti?")){state=defaultState();saveState();render()}}function switchTab(id,btn){document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));btn.classList.add("active");$(id).classList.add("active");if(id==="report")renderReport();if(id==="backup")renderBackup();if(id==="cloud")renderCloud();if(id==="tutor")renderTutorIntro()}function shuffle(a){return[...a].sort(()=>Math.random()-.5)}function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+};$("exportBtn").onclick=exportProgress;$("copyBackupBtn").onclick=copyBackup;$("importFile").onchange=importProgress;$("syncNowBtn").onclick=syncNow;$("pullCloudBtn").onclick=pullCloud;$("pushCloudBtn").onclick=pushCloud;$("toggleDetail").onclick=toggleDetail;initTutor();initOralTrainer();document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>switchTab(b.dataset.tab,b));window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;$("installBtn").classList.remove("hidden")});$("installBtn").onclick=async()=>{if(deferredPrompt){deferredPrompt.prompt();deferredPrompt=null;$("installBtn").classList.add("hidden")}};render()}function render(){if(!state.profileReady){$("loginScreen").classList.remove("hidden");$("appScreen").classList.add("hidden");$("studentName").value=state.name;$("examDate").value=state.examDate;return}$("loginScreen").classList.add("hidden");$("appScreen").classList.remove("hidden");const l=lesson();$("lessonTitle").textContent=`Giorno ${l.id} · ${l.title}`;$("lessonGoal").textContent=l.goal;$("daysLeft").textContent=daysLeft();const pct=Math.round(state.completed.length/LESSONS.length*100);$("progressLabel").textContent=`${pct}% completato`;$("progressBar").style.width=pct+"%";$("stars").textContent=state.stars;$("doneCount").textContent=state.completed.length;$("avgScore").textContent=averageScore()+"%";$("examGrade").textContent=lastExamGrade();renderTheory(l);renderMap(l);renderQuiz(l);renderPlan();renderChart();renderReport()}function daysLeft(){const today=new Date();today.setHours(0,0,0,0);const exam=new Date(state.examDate+"T00:00:00");return Math.max(0,Math.ceil((exam-today)/86400000))}function averageScore(){const vals=Object.values(state.scores);if(!vals.length)return 0;return Math.round(vals.reduce((a,b)=>a+b,0)/vals.length)}function lastExamGrade(){if(!state.examHistory.length)return "—";return state.examHistory[state.examHistory.length-1].grade.toFixed(1)}function renderTheory(l){$("theoryBox").innerHTML=l.theory.map(x=>`<div class="theory-item">${escapeHtml(x)}</div>`).join("");$("detailBox").classList.add("hidden");$("toggleDetail").textContent="Apri spiegazione dettagliata";$("detailBox").innerHTML=l.detail.map(x=>`<div class="detail-item">${escapeHtml(x)}</div>`).join("")}function toggleDetail(){const b=$("detailBox");b.classList.toggle("hidden");$("toggleDetail").textContent=b.classList.contains("hidden")?"Apri spiegazione dettagliata":"Chiudi spiegazione dettagliata"}function renderMap(l){
+  $("mapBox").innerHTML=l.map.map((x,i)=>`<div class="map-node">${i?"→ ":""}${escapeHtml(x)}</div>`).join("");
+  const isLastLesson = l.id === LESSONS[LESSONS.length-1].id;
+  if(isLastLesson){
+    $("mapBox").innerHTML += `<div class="mega-map-actions"><button id="megaMapBtn">🧠 Mega mappa finale</button></div><div id="megaMapBox" class="mega-map-box hidden"></div>`;
+    const btn=$("megaMapBtn");
+    if(btn) btn.onclick=toggleMegaMap;
+  }
+}function renderQuiz(l){$("quizResult").textContent="";$("quizBox").innerHTML=l.quiz.map((q,qi)=>`<div class="quiz-q"><p>${qi+1}. ${escapeHtml(q.q)}</p>${q.options.map((o,oi)=>`<label><input type="radio" name="q${qi}" value="${oi}"> ${escapeHtml(o)}</label>`).join("")}</div>`).join("")}function renderPlan(){$("planBox").innerHTML=LESSONS.map(l=>{const done=state.completed.includes(l.id);const score=state.scores[l.id]!=null?` · Quiz ${state.scores[l.id]}%`:"";return`<div class="plan-item ${done?"done":""}" onclick="goLesson(${l.id})"><div><b>Giorno ${l.id}</b> · ${escapeHtml(l.date)}<br>${escapeHtml(l.title)} <small>${score}</small></div><span class="badge">${done?"Fatto ⭐":"Da fare"}</span></div>`}).join("")}function renderChart(){const vals=LESSONS.map(l=>state.scores[l.id]??0).slice(0,14);$("chartBars").innerHTML=vals.map(v=>`<div class="bar" title="${v}%" style="height:${Math.max(4,v)}%"></div>`).join("")}function goLesson(id){state.current=id;saveState();render();window.scrollTo({top:0,behavior:"smooth"})}window.goLesson=goLesson;function completeLesson(){if(!state.completed.includes(state.current)){state.completed.push(state.current);state.stars+=1}if(state.current<LESSONS.length)state.current+=1;saveState();render();toast("Lezione completata. Stella guadagnata ⭐")}function checkQuiz(){const l=lesson();let correct=0;l.quiz.forEach((q,qi)=>{const selected=document.querySelector(`input[name="q${qi}"]:checked`);if(selected&&Number(selected.value)===q.a)correct++;else markWeak(l.area)});const score=Math.round(correct/l.quiz.length*100);state.scores[l.id]=score;if(score>=80&&!state.completed.includes(l.id)){state.stars+=1}saveState();renderChart();renderPlan();renderReport();$("avgScore").textContent=averageScore()+"%";$("quizResult").innerHTML=score>=80?`<span class="good">Ottimo: ${score}% · ${correct}/${l.quiz.length}</span>`:score>=60?`<span class="mid">Sufficiente ma da rinforzare: ${score}% · ${correct}/${l.quiz.length}</span>`:`<span class="bad">Da ripassare: ${score}% · ${correct}/${l.quiz.length}</span>`}function markWeak(area){state.weak[area]=(state.weak[area]||0)+1}function startExam(){const pool=LESSONS.flatMap(l=>l.quiz.map(q=>({...q,area:l.area,lesson:l.title})));currentExam=shuffle(pool).slice(0,10);$("examBox").innerHTML=currentExam.map((q,qi)=>`<div class="exam-q"><p>${qi+1}. ${escapeHtml(q.q)} <small>(${escapeHtml(q.area)})</small></p>${q.options.map((o,oi)=>`<label><input type="radio" name="e${qi}" value="${oi}"> ${escapeHtml(o)}</label>`).join("")}</div>`).join("");$("examResult").innerHTML="";toast("Simulazione avviata")}function gradeExam(){if(!currentExam.length){toast("Prima avvia una simulazione");return}let correct=0;const areaStats={};currentExam.forEach((q,qi)=>{areaStats[q.area]=areaStats[q.area]||{ok:0,tot:0};areaStats[q.area].tot++;const selected=document.querySelector(`input[name="e${qi}"]:checked`);if(selected&&Number(selected.value)===q.a){correct++;areaStats[q.area].ok++}else markWeak(q.area)});const percent=Math.round(correct/currentExam.length*100);const grade=Math.max(4,Math.round((4+percent/100*6)*10)/10);state.examHistory.push({date:new Date().toISOString(),percent,grade,areaStats});if(grade>=6)state.stars+=2;saveState();renderReport();$("examGrade").textContent=grade.toFixed(1);$("examResult").innerHTML=`<h3>Voto finale: ${grade.toFixed(1)}/10</h3><p>${correct}/10 corrette · ${percent}%</p>`+renderAreaStats(areaStats)}function renderAreaStats(stats){return Object.entries(stats).map(([area,s])=>{const p=Math.round(s.ok/s.tot*100);return`<div class="area-row"><b>${escapeHtml(area)} · ${p}%</b>${s.ok}/${s.tot} corrette<div class="area-bar"><div style="width:${p}%"></div></div></div>`}).join("")}function renderReport(){const byArea={};LESSONS.forEach(l=>{if(state.scores[l.id]!=null){byArea[l.area]=byArea[l.area]||[];byArea[l.area].push(state.scores[l.id])}});let html="<h3>Situazione per area</h3>";if(!Object.keys(byArea).length)html+="<p>Fai almeno un quiz per vedere il report.</p>";Object.entries(byArea).forEach(([area,vals])=>{const avg=Math.round(vals.reduce((a,b)=>a+b,0)/vals.length);const cls=avg>=80?"good":avg>=60?"mid":"bad";html+=`<div class="area-row"><b class="${cls}">${escapeHtml(area)} · ${avg}%</b><div class="area-bar"><div style="width:${avg}%"></div></div></div>`});const weak=Object.entries(state.weak).sort((a,b)=>b[1]-a[1]).slice(0,3);html+="<h3>Punti da rinforzare</h3>";html+=weak.length?weak.map(([a,n])=>`<p>⚠️ <b>${escapeHtml(a)}</b>: ${n} errori registrati. Ripassare mappe e spiegazione dettagliata.</p>`).join(""):"<p>Nessun punto debole registrato.</p>";html+="<h3>Punti forti</h3>";const strong=Object.entries(byArea).map(([a,v])=>[a,Math.round(v.reduce((x,y)=>x+y,0)/v.length)]).filter(x=>x[1]>=80);html+=strong.length?strong.map(([a,p])=>`<p>✅ <b>${escapeHtml(a)}</b>: ${p}% medio.</p>`).join(""):"<p>Completa altri quiz per individuare i punti forti.</p>";$("reportBox").innerHTML=html}function resetAll(){if(confirm("Vuoi azzerare profilo, stelle, quiz, esami e completamenti?")){state=defaultState();saveState();render()}}function switchTab(id,btn){document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));btn.classList.add("active");$(id).classList.add("active");if(id==="report")renderReport();if(id==="backup")renderBackup();if(id==="cloud")renderCloud();if(id==="tutor")renderTutorIntro();if(id==="interrogami")renderOralIntro();if(id==="errors")renderErrorTips();if(id==="last7")renderLast7Plan()}function shuffle(a){return[...a].sort(()=>Math.random()-.5)}function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 
 function initTutor(){
   const ids=["tutorExplainBtn","tutorSimpleBtn","tutorExampleBtn","tutorOralBtn","tutorAskBtn","tutorClearBtn"];
@@ -284,3 +292,151 @@ function renderCloud(){
 
 init();
 initCloud();
+
+
+/* =========================
+   Interrogazione orale + errori + ultimi 7 giorni
+   ========================= */
+let currentOralQuestion=null;
+let oralSimulation=null;
+const ERROR_TIPS=[
+  {area:"Hardware/Software",wrong:"Dire che Word è hardware.",right:"Word è software applicativo; il monitor, la tastiera e il mouse sono hardware."},
+  {area:"RAM/SSD",wrong:"Dire che la RAM conserva i file per sempre.",right:"La RAM è temporanea; SSD e hard disk sono memorie permanenti."},
+  {area:"Internet",wrong:"Dire che Google è Internet o che Chrome è Google.",right:"Internet è la rete; Chrome/Safari sono browser; Google è un motore di ricerca."},
+  {area:"Excel",wrong:"Scrivere una formula senza il segno =.",right:"Le formule Excel iniziano sempre con =, per esempio =SOMMA(A1:A5)."},
+  {area:"Grafici",wrong:"Usare il grafico a torta per qualunque dato.",right:"Torta = parti di un totale; colonne = confronto; linee = andamento nel tempo."},
+  {area:"Sicurezza",wrong:"Pensare che una password semplice sia più comoda e quindi vada bene.",right:"Una password sicura deve essere lunga, non ovvia e diversa per ogni servizio."},
+  {area:"Phishing",wrong:"Cliccare subito su link ricevuti via email o messaggio.",right:"Prima controllo mittente, link, errori strani e richiesta di dati personali."},
+  {area:"Algoritmi",wrong:"Dire solo che è un disegno o un programma.",right:"Un algoritmo è una sequenza ordinata di istruzioni per risolvere un problema."},
+  {area:"Diagrammi",wrong:"Confondere rombo e rettangolo.",right:"Rombo = decisione; rettangolo = elaborazione; ovale = inizio/fine; parallelogramma = input/output."},
+  {area:"Orale",wrong:"Rispondere con una sola parola.",right:"Usare sempre: definizione + funzione + esempio pratico."}
+];
+function initOralTrainer(){
+  const ids=["oralNewBtn","oralShowBtn","oralStartSimBtn","oralKnownBtn","oralWeakBtn","oralNextBtn"];
+  if(!ids.every(id=>$(id))) return;
+  $("oralNewBtn").onclick=()=>newOralQuestion(false);
+  $("oralShowBtn").onclick=showOralAnswer;
+  $("oralStartSimBtn").onclick=startOralSimulation;
+  $("oralKnownBtn").onclick=()=>markOralResult(true);
+  $("oralWeakBtn").onclick=()=>markOralResult(false);
+  $("oralNextBtn").onclick=nextOralSimulationQuestion;
+}
+function buildOralPool(){
+  const oral=LESSONS.flatMap(l=>(l.oral||[]).map(pair=>({q:pair[0],a:pair[1],area:l.area,lesson:l.title})));
+  const extra=LESSONS.flatMap(l=>(l.quiz||[]).slice(0,4).map(q=>({q:q.q,a:q.options[q.a],area:l.area,lesson:l.title})));
+  return oral.concat(extra).filter(x=>x.q&&x.a&&!String(x.q).toLowerCase().startsWith("spiega: "));
+}
+function renderOralIntro(){
+  if(!$('oralBox')) return;
+  if(!$('oralBox').innerHTML.trim()){
+    $('oralBox').innerHTML='<b>Pronta per l\'interrogazione.</b><div class="oral-question">Premi “Nuova domanda orale”.</div><p>Regola: Arianna risponde prima a voce, poi apre la risposta modello.</p>';
+  }
+}
+function newOralQuestion(fromSimulation){
+  const pool=buildOralPool();
+  currentOralQuestion=shuffle(pool)[0];
+  showCurrentOralQuestion(fromSimulation?"Simulazione orale":"Domanda singola");
+}
+function showCurrentOralQuestion(label){
+  if(!currentOralQuestion) return;
+  $('oralBox').innerHTML=`<b>${escapeHtml(label||'Domanda orale')}</b><div class="oral-question">${escapeHtml(currentOralQuestion.q)}</div><p><small>Area: ${escapeHtml(currentOralQuestion.area)} · ${escapeHtml(currentOralQuestion.lesson)}</small></p><p>Rispondi a voce con: definizione, funzione, esempio.</p>`;
+  $('oralAnswerBox').classList.add('hidden');
+  $('oralAnswerBox').innerHTML='';
+  $('oralEvalBox').classList.toggle('hidden', !oralSimulation);
+}
+function showOralAnswer(){
+  if(!currentOralQuestion){toast('Prima scegli una domanda orale');return;}
+  $('oralAnswerBox').classList.remove('hidden');
+  $('oralAnswerBox').innerHTML=`<b>Risposta modello</b><p>${escapeHtml(currentOralQuestion.a)}</p><p><small>Non serve ripeterla identica: basta saperla spiegare con parole proprie.</small></p>`;
+}
+function startOralSimulation(){
+  const pool=shuffle(buildOralPool()).slice(0,10);
+  oralSimulation={questions:pool,idx:0,known:0,weak:0,weakAreas:{}};
+  currentOralQuestion=oralSimulation.questions[0];
+  showCurrentOralQuestion('Simulazione orale · domanda 1/10');
+  $('oralProgressBox').innerHTML='<p class="oral-score">Simulazione avviata: rispondi, mostra la risposta e segnala se la sapevi.</p>';
+  $('oralEvalBox').classList.remove('hidden');
+}
+function markOralResult(known){
+  if(!oralSimulation||!currentOralQuestion){toast('Avvia prima una simulazione orale');return;}
+  if(known) oralSimulation.known++; else {oralSimulation.weak++; oralSimulation.weakAreas[currentOralQuestion.area]=(oralSimulation.weakAreas[currentOralQuestion.area]||0)+1; markWeak(currentOralQuestion.area); saveState();}
+  toast(known?'Segnata come saputa':'Segnata da ripassare');
+}
+function nextOralSimulationQuestion(){
+  if(!oralSimulation){newOralQuestion(false);return;}
+  oralSimulation.idx++;
+  if(oralSimulation.idx>=oralSimulation.questions.length){finishOralSimulation();return;}
+  currentOralQuestion=oralSimulation.questions[oralSimulation.idx];
+  showCurrentOralQuestion(`Simulazione orale · domanda ${oralSimulation.idx+1}/10`);
+}
+function finishOralSimulation(){
+  const tot=oralSimulation.questions.length;
+  const pct=Math.round(oralSimulation.known/tot*100);
+  const weak=Object.entries(oralSimulation.weakAreas).sort((a,b)=>b[1]-a[1]);
+  $('oralBox').innerHTML=`<b>Simulazione orale conclusa</b><div class="oral-question">${oralSimulation.known}/${tot} risposte sapute · ${pct}%</div>`;
+  $('oralAnswerBox').classList.add('hidden');
+  $('oralEvalBox').classList.add('hidden');
+  $('oralProgressBox').innerHTML=weak.length?'<h3>Aree da ripassare</h3>'+weak.map(([a,n])=>`<p>⚠️ <b>${escapeHtml(a)}</b>: ${n} risposta/e da rinforzare.</p>`).join(''):'<p class="oral-score">Ottimo: nessuna area debole segnata.</p>';
+  oralSimulation=null;
+  currentOralQuestion=null;
+  renderReport();
+}
+function renderErrorTips(){
+  if(!$('errorsBox')) return;
+  const weak=Object.entries(state.weak||{}).sort((a,b)=>b[1]-a[1]);
+  let html='';
+  if(weak.length){html+='<h3>Errori registrati dall\'app</h3>'+weak.slice(0,5).map(([a,n])=>`<div class="tip-card"><b>${escapeHtml(a)}</b><p>${n} errore/i registrati. Ripassa teoria, mappa e poi rifai il quiz.</p></div>`).join('');}
+  html+='<h3>Errori tipici generali</h3>'+ERROR_TIPS.map(t=>`<div class="tip-card"><b>${escapeHtml(t.area)}</b><p class="wrong">❌ ${escapeHtml(t.wrong)}</p><p class="right">✅ ${escapeHtml(t.right)}</p></div>`).join('');
+  $('errorsBox').innerHTML=html;
+}
+function renderLast7Plan(){
+  if(!$('last7Box')) return;
+  const days=daysLeft();
+  const weak=Object.entries(state.weak||{}).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+  const priority=weak.length?weak:['Excel','Algoritmi','Diagrammi di flusso','Sicurezza','Internet'];
+  const plan=[
+    ['Giorno -7','Fondamenti: hardware, software, RAM, SSD, sistema operativo.'],
+    ['Giorno -6','Word e file: formattazione, tabelle, immagini, estensioni, cartelle.'],
+    ['Giorno -5','Excel: celle, formule SOMMA/MEDIA/MAX/MIN, grafici.'],
+    ['Giorno -4','Internet e reti: browser, Google, email, cloud, LAN/WAN, router.'],
+    ['Giorno -3','Sicurezza: password, backup, phishing, malware, privacy.'],
+    ['Giorno -2','Algoritmi e diagrammi: input, elaborazione, output, simboli.'],
+    ['Giorno -1','Solo mappe, Interrogami, errori tipici. Niente studio pesante.']
+  ];
+  let html=`<div class="last7-day"><b>Giorni mancanti all'esame: ${days}</b><p>${days<=7?'Modalità ripasso finale attiva.':'Quando mancheranno 7 giorni, usa questa scaletta.'}</p><p><b>Priorità attuali:</b> ${priority.slice(0,5).map(escapeHtml).join(', ')}</p></div>`;
+  html+=plan.map(([d,t],i)=>`<div class="last7-day"><h3>${escapeHtml(d)}</h3><p>${escapeHtml(t)}</p><p><b>Metodo:</b> 20 minuti teoria + 10 minuti mappa + 10 minuti Interrogami.</p></div>`).join('');
+  $('last7Box').innerHTML=html;
+}
+
+
+/*
+   Mega mappa finale: visibile solo nell'ultimo capitolo
+   Non modifica progressi, quiz, cloud o Firebase.
+*/
+function toggleMegaMap(){
+  const box=$("megaMapBox");
+  if(!box) return;
+  if(box.classList.contains("hidden")){
+    box.innerHTML=buildMegaMapHtml();
+    box.classList.remove("hidden");
+    $("megaMapBtn").textContent="Chiudi mega mappa";
+  }else{
+    box.classList.add("hidden");
+    $("megaMapBtn").textContent="🧠 Mega mappa finale";
+  }
+}
+function buildMegaMapHtml(){
+  const groups=[
+    {title:"Fondamenti", icon:"💻", items:["Informatica = trattamento automatico delle informazioni","Dato = elemento grezzo","Informazione = dato con significato","Bit = 0/1","Byte = 8 bit","Hardware = parti fisiche","Software = programmi","CPU = elabora istruzioni","RAM = memoria temporanea","SSD/HDD = memoria permanente"]},
+    {title:"Sistema operativo e file", icon:"🗂️", items:["Sistema operativo = programma principale","Windows gestisce hardware, file e applicazioni","Driver = collegamento tra sistema e periferica","File = documento digitale","Cartella = contenitore","Estensione = tipo di file",".docx Word · .xlsx Excel · .pptx PowerPoint · .pdf documento · .jpg immagine","Copia = duplica","Taglia = sposta","Cestino = file eliminati prima della cancellazione definitiva"]},
+    {title:"Word", icon:"📝", items:["Word = videoscrittura","Serve per relazioni, lettere e documenti","Formattare = cambiare aspetto del testo","Grassetto = evidenzia","Corsivo = mette in risalto termini particolari","Paragrafo = blocco di testo","Tabella = righe e colonne","Immagine = spiega meglio se pertinente","Intestazione = parte alta pagina","Piè di pagina = parte bassa pagina","Prima di stampare: anteprima, margini, orientamento, errori"]},
+    {title:"Excel", icon:"📊", items:["Excel = foglio elettronico","Serve per dati, calcoli e grafici","Colonne = lettere","Righe = numeri","Cella = incrocio riga/colonna, es. A1","Intervallo = gruppo di celle, es. A1:A10","Formula = inizia con =","SOMMA = totale","MEDIA = valore medio","MAX = valore più alto","MIN = valore più basso","Grafico a colonne = confronto","Grafico a linee = andamento nel tempo","Grafico a torta = parti di un totale"]},
+    {title:"PowerPoint", icon:"🖥️", items:["PowerPoint = presentazioni","Slide = pagina della presentazione","Titolo chiaro","Poco testo","Immagini utili","Transizione = passaggio tra slide","Animazione = movimento di un oggetto","La presentazione aiuta a parlare, non va letta tutta"]},
+    {title:"Internet e reti", icon:"🌐", items:["Internet = rete mondiale","Web = siti e pagine","Browser = programma per navigare","Chrome, Safari, Edge, Firefox = browser","Google = motore di ricerca","URL = indirizzo di una pagina","Email = messaggio digitale","Allegato = file inviato con email","Cloud = salvataggio online sincronizzato","LAN = rete locale","WAN = rete geografica ampia","Router = distribuisce connessione","Modem = collega alla linea del provider","Wi‑Fi = rete senza fili"]},
+    {title:"Sicurezza", icon:"🔐", items:["Sicurezza informatica = protezione dati e dispositivi","Password sicura = lunga, non ovvia, diversa","2FA = secondo controllo oltre password","Backup = copia di sicurezza","Phishing = messaggio falso per rubare dati","Malware = software dannoso","Virus = malware che si diffonde","Ransomware = blocca dati e chiede riscatto","Antivirus = aiuta a rilevare minacce","Dati personali = da proteggere","Non cliccare link sospetti"]},
+    {title:"Algoritmi e diagrammi", icon:"🔁", items:["Algoritmo = sequenza ordinata di istruzioni","Deve essere chiaro, finito e ordinato","Input = dati in ingresso","Elaborazione = operazioni sui dati","Output = risultato","Diagramma di flusso = algoritmo disegnato","Ovale = inizio/fine","Parallelogramma = input/output","Rettangolo = elaborazione","Rombo = decisione sì/no","Frecce = ordine delle operazioni"]},
+    {title:"Informatica in agraria", icon:"🌱", items:["Dati agricoli: temperatura, umidità, pioggia, raccolto","Excel organizza produzioni, costi e magazzino","Grafici mostrano andamento di irrigazione o temperatura","Sensori raccolgono dati dall'ambiente","Tecnologia aiuta a ridurre sprechi","Agricoltura di precisione = decisioni basate sui dati"]}
+  ];
+  const links=["Dato → Informazione → Excel → Grafico → Decisione", "Hardware + Software → Computer funzionante", "Internet + Cloud → Salvataggio e condivisione", "Sicurezza → Protezione di account, file e dati", "Algoritmo → Diagramma di flusso → Soluzione del problema"];
+  return `<h3>🧠 Mega mappa concettuale finale</h3><p>Usala prima dell'interrogazione: leggi un blocco, coprilo, poi prova a spiegarlo ad alta voce con una frase semplice e un esempio.</p><div class="mega-map-grid">${groups.map(g=>`<div class="mega-card"><h4>${g.icon} ${escapeHtml(g.title)}</h4><ul>${g.items.map(i=>`<li>${escapeHtml(i)}</li>`).join("")}</ul></div>`).join("")}</div><div class="mega-links"><h4>Collegamenti da ricordare</h4>${links.map(x=>`<div class="mega-link">${escapeHtml(x)}</div>`).join("")}</div><div class="mega-final"><b>Frase jolly per l'orale:</b> “L'informatica serve a trasformare dati in informazioni utili usando hardware, software, programmi come Word ed Excel, Internet, sicurezza e algoritmi.”</div>`;
+}
