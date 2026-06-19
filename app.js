@@ -427,16 +427,91 @@ function toggleMegaMap(){
 }
 function buildMegaMapHtml(){
   const groups=[
-    {title:"Fondamenti", icon:"💻", items:["Informatica = trattamento automatico delle informazioni","Dato = elemento grezzo","Informazione = dato con significato","Bit = 0/1","Byte = 8 bit","Hardware = parti fisiche","Software = programmi","CPU = elabora istruzioni","RAM = memoria temporanea","SSD/HDD = memoria permanente"]},
-    {title:"Sistema operativo e file", icon:"🗂️", items:["Sistema operativo = programma principale","Windows gestisce hardware, file e applicazioni","Driver = collegamento tra sistema e periferica","File = documento digitale","Cartella = contenitore","Estensione = tipo di file",".docx Word · .xlsx Excel · .pptx PowerPoint · .pdf documento · .jpg immagine","Copia = duplica","Taglia = sposta","Cestino = file eliminati prima della cancellazione definitiva"]},
-    {title:"Word", icon:"📝", items:["Word = videoscrittura","Serve per relazioni, lettere e documenti","Formattare = cambiare aspetto del testo","Grassetto = evidenzia","Corsivo = mette in risalto termini particolari","Paragrafo = blocco di testo","Tabella = righe e colonne","Immagine = spiega meglio se pertinente","Intestazione = parte alta pagina","Piè di pagina = parte bassa pagina","Prima di stampare: anteprima, margini, orientamento, errori"]},
-    {title:"Excel", icon:"📊", items:["Excel = foglio elettronico","Serve per dati, calcoli e grafici","Colonne = lettere","Righe = numeri","Cella = incrocio riga/colonna, es. A1","Intervallo = gruppo di celle, es. A1:A10","Formula = inizia con =","SOMMA = totale","MEDIA = valore medio","MAX = valore più alto","MIN = valore più basso","Grafico a colonne = confronto","Grafico a linee = andamento nel tempo","Grafico a torta = parti di un totale"]},
-    {title:"PowerPoint", icon:"🖥️", items:["PowerPoint = presentazioni","Slide = pagina della presentazione","Titolo chiaro","Poco testo","Immagini utili","Transizione = passaggio tra slide","Animazione = movimento di un oggetto","La presentazione aiuta a parlare, non va letta tutta"]},
-    {title:"Internet e reti", icon:"🌐", items:["Internet = rete mondiale","Web = siti e pagine","Browser = programma per navigare","Chrome, Safari, Edge, Firefox = browser","Google = motore di ricerca","URL = indirizzo di una pagina","Email = messaggio digitale","Allegato = file inviato con email","Cloud = salvataggio online sincronizzato","LAN = rete locale","WAN = rete geografica ampia","Router = distribuisce connessione","Modem = collega alla linea del provider","Wi‑Fi = rete senza fili"]},
-    {title:"Sicurezza", icon:"🔐", items:["Sicurezza informatica = protezione dati e dispositivi","Password sicura = lunga, non ovvia, diversa","2FA = secondo controllo oltre password","Backup = copia di sicurezza","Phishing = messaggio falso per rubare dati","Malware = software dannoso","Virus = malware che si diffonde","Ransomware = blocca dati e chiede riscatto","Antivirus = aiuta a rilevare minacce","Dati personali = da proteggere","Non cliccare link sospetti"]},
-    {title:"Algoritmi e diagrammi", icon:"🔁", items:["Algoritmo = sequenza ordinata di istruzioni","Deve essere chiaro, finito e ordinato","Input = dati in ingresso","Elaborazione = operazioni sui dati","Output = risultato","Diagramma di flusso = algoritmo disegnato","Ovale = inizio/fine","Parallelogramma = input/output","Rettangolo = elaborazione","Rombo = decisione sì/no","Frecce = ordine delle operazioni"]},
-    {title:"Informatica in agraria", icon:"🌱", items:["Dati agricoli: temperatura, umidità, pioggia, raccolto","Excel organizza produzioni, costi e magazzino","Grafici mostrano andamento di irrigazione o temperatura","Sensori raccolgono dati dall'ambiente","Tecnologia aiuta a ridurre sprechi","Agricoltura di precisione = decisioni basate sui dati"]}
+    {title:"Fondamenti", icon:"💻", side:"left", items:[
+      ["Informatica", "tratta automaticamente le informazioni"],
+      ["Dato", "elemento grezzo"],
+      ["Informazione", "dato con significato"],
+      ["Bit/Byte", "0-1 / 8 bit"],
+      ["Hardware", "parti fisiche"],
+      ["Software", "programmi"],
+      ["CPU", "elabora istruzioni"],
+      ["RAM", "memoria temporanea"],
+      ["SSD/HDD", "memoria permanente"]
+    ]},
+    {title:"Sistema e file", icon:"🗂️", side:"left", items:[
+      ["Sistema operativo", "programma principale"],
+      ["Windows", "gestisce PC, file e app"],
+      ["Driver", "fa comunicare periferiche"],
+      ["File", "documento digitale"],
+      ["Cartella", "contenitore di file"],
+      ["Estensioni", ".docx .xlsx .pptx .pdf .jpg"],
+      ["Copia/Taglia", "duplica / sposta"]
+    ]},
+    {title:"Office", icon:"📚", side:"left", items:[
+      ["Word", "documenti e relazioni"],
+      ["Formattazione", "aspetto del testo"],
+      ["Tabelle", "righe e colonne"],
+      ["Excel", "dati, calcoli e grafici"],
+      ["Cella", "incrocio riga-colonna"],
+      ["Formule", "iniziano con ="],
+      ["SOMMA/MEDIA", "totale / valore medio"],
+      ["MAX/MIN", "più alto / più basso"],
+      ["PowerPoint", "presentazioni a slide"]
+    ]},
+    {title:"Internet e reti", icon:"🌐", side:"right", items:[
+      ["Internet", "rete mondiale"],
+      ["Web", "siti e pagine"],
+      ["Browser", "programma per navigare"],
+      ["Google", "motore di ricerca"],
+      ["URL", "indirizzo pagina"],
+      ["Email", "messaggio digitale"],
+      ["Cloud", "file online sincronizzati"],
+      ["LAN/WAN", "locale / geografica"],
+      ["Router/Wi‑Fi", "distribuisce connessione / senza fili"]
+    ]},
+    {title:"Sicurezza", icon:"🔐", side:"right", items:[
+      ["Password sicura", "lunga, diversa, non ovvia"],
+      ["2FA", "secondo controllo"],
+      ["Backup", "copia di sicurezza"],
+      ["Phishing", "messaggio falso per rubare dati"],
+      ["Malware", "software dannoso"],
+      ["Virus", "malware che si diffonde"],
+      ["Ransomware", "blocca dati e chiede riscatto"],
+      ["Privacy", "protezione dati personali"]
+    ]},
+    {title:"Logica e agraria", icon:"🌱", side:"right", items:[
+      ["Algoritmo", "sequenza ordinata di istruzioni"],
+      ["Input", "dati in ingresso"],
+      ["Elaborazione", "operazioni sui dati"],
+      ["Output", "risultato"],
+      ["Flow chart", "algoritmo disegnato"],
+      ["Ovale", "inizio/fine"],
+      ["Rombo", "decisione sì/no"],
+      ["Agraria", "dati, sensori, produzione, sprechi"]
+    ]}
   ];
-  const links=["Dato → Informazione → Excel → Grafico → Decisione", "Hardware + Software → Computer funzionante", "Internet + Cloud → Salvataggio e condivisione", "Sicurezza → Protezione di account, file e dati", "Algoritmo → Diagramma di flusso → Soluzione del problema"];
-  return `<h3>🧠 Mega mappa concettuale finale</h3><p>Usala prima dell'interrogazione: leggi un blocco, coprilo, poi prova a spiegarlo ad alta voce con una frase semplice e un esempio.</p><div class="mega-map-grid">${groups.map(g=>`<div class="mega-card"><h4>${g.icon} ${escapeHtml(g.title)}</h4><ul>${g.items.map(i=>`<li>${escapeHtml(i)}</li>`).join("")}</ul></div>`).join("")}</div><div class="mega-links"><h4>Collegamenti da ricordare</h4>${links.map(x=>`<div class="mega-link">${escapeHtml(x)}</div>`).join("")}</div><div class="mega-final"><b>Frase jolly per l'orale:</b> “L'informatica serve a trasformare dati in informazioni utili usando hardware, software, programmi come Word ed Excel, Internet, sicurezza e algoritmi.”</div>`;
+  const left=groups.filter(g=>g.side==="left");
+  const right=groups.filter(g=>g.side==="right");
+  const branchHtml=g=>`<div class="coggle-branch"><div class="coggle-branch-title"><span>${g.icon}</span><b>${escapeHtml(g.title)}</b></div><div class="coggle-items">${g.items.map(([k,v])=>`<div class="coggle-node"><b>${escapeHtml(k)}</b><small>${escapeHtml(v)}</small></div>`).join("")}</div></div>`;
+  return `<div class="coggle-wrap">
+    <div class="coggle-head">
+      <h3>🧠 Mega mappa finale stile Coggle</h3>
+      <p>Leggila dal centro verso i rami. Per ogni nodo Arianna deve dire: <b>cos'è</b>, <b>a cosa serve</b>, <b>un esempio</b>.</p>
+    </div>
+    <div class="coggle-map">
+      <div class="coggle-side coggle-left">${left.map(branchHtml).join("")}</div>
+      <div class="coggle-center">
+        <div class="coggle-core"><span>💡</span><b>INFORMATICA</b><small>Dati → elaborazione → informazioni utili</small></div>
+        <div class="coggle-mini">Frase jolly: “L'informatica usa hardware, software, programmi, Internet, sicurezza e algoritmi per trasformare dati in informazioni.”</div>
+      </div>
+      <div class="coggle-side coggle-right">${right.map(branchHtml).join("")}</div>
+    </div>
+    <div class="coggle-links">
+      <h4>Collegamenti da dire all'orale</h4>
+      <div>Dato → Informazione → Excel → Grafico → Decisione</div>
+      <div>Hardware + Software + Sistema operativo → Computer funzionante</div>
+      <div>Internet + Cloud + Sicurezza → File condivisi ma protetti</div>
+      <div>Algoritmo → Diagramma di flusso → Soluzione ordinata di un problema</div>
+    </div>
+  </div>`;
 }
