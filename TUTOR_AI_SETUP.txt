@@ -1,0 +1,46 @@
+CONFIGURAZIONE TUTOR AI - ARIANNA RECUPERO INFORMATICA
+
+STATO DELLA VERSIONE
+- L'app contiene già la scheda "Tutor AI".
+- Se tutor-config.js ha endpoint vuoto, funziona il tutor locale gratuito.
+- Per attivare la vera AI serve deployare la Firebase Function inclusa nella cartella functions.
+
+COSA NON È STATO TOCCATO
+- Firestore progressi
+- Authentication anonima esistente
+- pushCloud(), pullCloud(), syncNow(), initCloud()
+- data.js programma completo
+
+COME ATTIVARE LA VERA AI
+1. Installa Firebase CLI sul Mac:
+   npm install -g firebase-tools
+
+2. Entra nel progetto:
+   firebase login
+   firebase use arianna-esame-informatica
+
+3. Imposta la chiave OpenAI come secret Firebase:
+   firebase functions:secrets:set OPENAI_API_KEY
+
+4. Entra nella cartella functions e installa pacchetti:
+   cd functions
+   npm install
+   cd ..
+
+5. Deploy della funzione:
+   firebase deploy --only functions:tutorAi
+
+6. Copia l'URL prodotto dal deploy.
+
+7. Apri tutor-config.js e inserisci l'URL:
+   endpoint: "https://europe-west1-...cloudfunctions.net/tutorAi"
+
+8. Ricarica index.html, app.js, style.css, tutor-config.js e cartella functions sul repository.
+
+REGOLE DEL TUTOR
+- Spiega capitoli e termini.
+- Fa esempi.
+- Allena all'orale.
+- Non dà risposte ai quiz.
+- Non suggerisce opzioni A/B/C.
+- Non risolve simulazioni.
