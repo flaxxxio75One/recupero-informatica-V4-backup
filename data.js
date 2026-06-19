@@ -1,124 +1,165 @@
 const LESSONS = [
   {
     "id": 1,
-    "date": "14 giugno",
-    "title": "Hardware e Software",
+    "date": "Modulo 1",
+    "title": "Cos'è l'informatica: dati, informazioni, bit e byte",
     "area": "Fondamenti",
-    "goal": "Studiare: Hardware e Software.",
+    "goal": "Capire che cosa studia l'informatica e imparare le unità di misura principali.",
     "theory": [
-      "Il computer è una macchina elettronica che riceve dati, li elabora e restituisce risultati.",
-      "Hardware significa parti fisiche che puoi toccare: monitor, tastiera, mouse, stampante.",
-      "Software significa programmi: Windows, Word, Excel, browser, antivirus.",
-      "Esempio: lo schermo dell'iPhone è hardware; WhatsApp è software."
+      "L'informatica è la scienza che studia come raccogliere, organizzare, elaborare e comunicare le informazioni usando il computer.",
+      "Un dato è un elemento semplice, per esempio 15, Roma, verde. Diventa informazione quando ha un significato: temperatura 15 °C a Roma.",
+      "Il computer lavora con il sistema binario, cioè usa solo due simboli: 0 e 1.",
+      "Il bit è l'unità più piccola dell'informazione. Il byte è formato da 8 bit.",
+      "Le unità più usate sono KB, MB, GB e TB: servono per indicare la grandezza di file, foto, video e memorie."
     ],
     "detail": [
-      "Trucco per ricordare: se lo tocchi è hardware, se lo apri sullo schermo è software.",
-      "Hardware e software lavorano insieme: il mouse è fisico, ma per funzionare ha bisogno del sistema operativo.",
-      "Risposta orale pronta: l'hardware sono le parti fisiche del computer; il software sono i programmi che lo fanno funzionare."
+      "Parola chiave: informatica = informazioni automatiche. Il computer non capisce le parole come noi: trasforma tutto in numeri, soprattutto 0 e 1.",
+      "Dato e informazione non sono la stessa cosa. '35' da solo è un dato; '35 gradi di temperatura' è un'informazione perché posso capirla e usarla.",
+      "Unità da ricordare: 1 byte = 8 bit; circa 1 KB = 1024 byte; circa 1 MB = 1024 KB; circa 1 GB = 1024 MB; circa 1 TB = 1024 GB.",
+      "Esempio agrario: i dati possono essere temperatura, umidità, peso del raccolto, litri d'acqua. Con Excel questi dati diventano informazioni utili per decidere quando irrigare o quanto si è prodotto.",
+      "Errore tipico: dire che il byte è più piccolo del bit. È il contrario: il bit è il più piccolo, il byte contiene 8 bit."
     ],
     "map": [
-      "COMPUTER",
-      "Hardware = parti fisiche",
-      "Software = programmi",
-      "Monitor/mouse = hardware",
-      "Windows/Word = software"
+      "INFORMATICA",
+      "Dati",
+      "Elaborazione",
+      "Informazioni",
+      "Bit = 0/1",
+      "Byte = 8 bit",
+      "KB → MB → GB → TB"
     ],
     "oral": [
       [
-        "Cos'è l'hardware?",
-        "Parte fisica"
+        "Cos'è l'informatica?",
+        "È la disciplina che tratta le informazioni con strumenti automatici come il computer."
       ],
       [
-        "Cos'è il software?",
-        "Programmi"
+        "Differenza tra dato e informazione?",
+        "Il dato è grezzo; l'informazione è un dato con significato."
       ],
       [
-        "Mouse è:",
-        "Hardware"
+        "Cos'è un bit?",
+        "La più piccola unità di informazione, può valere 0 o 1."
       ],
       [
-        "Word è:",
-        "Software"
+        "Cos'è un byte?",
+        "Un gruppo di 8 bit."
       ],
       [
-        "Schermo iPhone è:",
-        "Hardware"
+        "A cosa servono KB, MB, GB e TB?",
+        "A misurare la quantità di memoria o la dimensione dei file."
       ],
       [
-        "Windows è:",
-        "Software"
+        "Esempio di dato in agraria?",
+        "Temperatura, umidità, peso del raccolto, litri d'acqua."
       ]
     ],
     "quiz": [
       {
-        "q": "Cos'è l'hardware?",
+        "q": "L'informatica studia soprattutto:",
         "options": [
-          "Parte fisica",
-          "Programma",
-          "Sito"
+          "Il trattamento automatico delle informazioni",
+          "Solo i videogiochi",
+          "Solo la matematica"
         ],
         "a": 0
       },
       {
-        "q": "Cos'è il software?",
+        "q": "Un dato è:",
         "options": [
-          "Programmi",
-          "Monitor",
-          "Tastiera"
+          "Un elemento grezzo non ancora interpretato",
+          "Sempre una foto",
+          "Sempre un programma"
         ],
         "a": 0
       },
       {
-        "q": "Mouse è:",
+        "q": "'20 °C in serra' è:",
         "options": [
+          "Un'informazione",
+          "Un mouse",
+          "Un sistema operativo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il computer usa alla base:",
+        "options": [
+          "0 e 1",
+          "Solo lettere",
+          "Solo immagini"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il bit può valere:",
+        "options": [
+          "0 oppure 1",
+          "Da 1 a 10",
+          "Sempre 8"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un byte è formato da:",
+        "options": [
+          "8 bit",
+          "8 GB",
+          "8 file"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quale unità è più grande?",
+        "options": [
+          "GB",
+          "MB",
+          "KB"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quale ordine è corretto?",
+        "options": [
+          "KB, MB, GB, TB",
+          "TB, KB, MB, GB",
+          "MB, KB, TB, GB"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una foto da 4 MB indica:",
+        "options": [
+          "La dimensione del file",
+          "La velocità della CPU",
+          "Il numero di monitor"
+        ],
+        "a": 0
+      },
+      {
+        "q": "In agraria Excel può trasformare dati in:",
+        "options": [
+          "Informazioni utili",
           "Hardware",
-          "Software",
-          "Cloud"
+          "Virus"
         ],
         "a": 0
       },
       {
-        "q": "Word è:",
+        "q": "Errore da evitare:",
         "options": [
-          "Hardware",
-          "Software",
-          "Output"
-        ],
-        "a": 1
-      },
-      {
-        "q": "Schermo iPhone è:",
-        "options": [
-          "Hardware",
-          "Software",
-          "Email"
+          "Confondere dato e informazione",
+          "Usare esempi pratici",
+          "Dire che 1 byte = 8 bit"
         ],
         "a": 0
       },
       {
-        "q": "Windows è:",
+        "q": "La memoria di un telefono si misura spesso in:",
         "options": [
-          "Software",
-          "Stampante",
-          "RAM"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Stampante è:",
-        "options": [
-          "Hardware",
-          "Browser",
-          "Formula"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Excel è:",
-        "options": [
-          "Software",
-          "Mouse",
-          "Monitor"
+          "GB",
+          "Volt",
+          "Metri"
         ],
         "a": 0
       }
@@ -126,665 +167,129 @@ const LESSONS = [
   },
   {
     "id": 2,
-    "date": "15 giugno",
-    "title": "Input e Output",
+    "date": "Modulo 2",
+    "title": "Hardware: componenti del computer e periferiche",
     "area": "Fondamenti",
-    "goal": "Studiare: Input e Output.",
+    "goal": "Riconoscere le parti fisiche del computer e sapere a cosa servono.",
     "theory": [
-      "Le periferiche sono dispositivi collegati al computer.",
-      "Input significa dati che entrano: tastiera, mouse, scanner, microfono.",
-      "Output significa risultati che escono: monitor, stampante, altoparlanti.",
-      "Il touchscreen può essere sia input sia output."
+      "Hardware significa parti fisiche del computer: tutto ciò che si può toccare.",
+      "La CPU è il cervello del computer: esegue istruzioni e calcoli.",
+      "La scheda madre collega tra loro CPU, RAM, memoria, porte e periferiche.",
+      "Le periferiche di input inseriscono dati: tastiera, mouse, scanner, microfono.",
+      "Le periferiche di output mostrano risultati: monitor, stampante, casse audio."
     ],
     "detail": [
-      "Input = entrata. Output = uscita.",
-      "Quando scrivi con la tastiera mandi dati al computer: input.",
-      "Quando il computer mostra l'immagine sul monitor ti restituisce un risultato: output.",
-      "Risposta orale pronta: input inserisce dati, output mostra risultati."
+      "Trucco: hardware = ferro, pezzi, componenti. Se lo puoi toccare, quasi sempre è hardware.",
+      "CPU significa Central Processing Unit. Non conserva i file: li elabora. Per conservare i file servono SSD o hard disk.",
+      "La scheda madre è come una strada principale: mette in comunicazione tutti i componenti.",
+      "Input = entrata dei dati. Output = uscita dei risultati. Il touchscreen è sia input sia output perché mostra immagini e riceve tocchi.",
+      "Errore tipico: dire che Word è hardware. Word è software; il monitor che lo mostra è hardware."
     ],
     "map": [
-      "PERIFERICHE",
-      "Input = dati entrano",
-      "Output = dati escono",
-      "Tastiera/mouse = input",
-      "Monitor/stampante = output"
+      "HARDWARE",
+      "CPU",
+      "Scheda madre",
+      "RAM",
+      "SSD/HDD",
+      "Input",
+      "Output"
     ],
     "oral": [
       [
-        "Tastiera è:",
-        "Input"
+        "Cos'è l'hardware?",
+        "Sono le parti fisiche del computer."
       ],
       [
-        "Stampante è:",
-        "Output"
+        "Cos'è la CPU?",
+        "Il processore che esegue istruzioni e calcoli."
       ],
       [
-        "Monitor è:",
-        "Output"
+        "A cosa serve la scheda madre?",
+        "Collega e fa comunicare i componenti."
       ],
       [
-        "Microfono è:",
-        "Input"
+        "Tastiera è input o output?",
+        "Input."
       ],
       [
-        "Touchscreen è:",
-        "Input e output"
+        "Monitor è input o output?",
+        "Output."
       ],
       [
-        "Scanner è:",
-        "Input"
+        "Touchscreen?",
+        "Sia input sia output."
       ]
     ],
     "quiz": [
       {
-        "q": "Tastiera è:",
+        "q": "Hardware significa:",
         "options": [
-          "Input",
-          "Output",
-          "RAM"
+          "Parti fisiche",
+          "Programmi",
+          "Siti internet"
         ],
         "a": 0
       },
       {
-        "q": "Stampante è:",
+        "q": "La CPU serve a:",
         "options": [
-          "Input",
-          "Output",
-          "Software"
-        ],
-        "a": 1
-      },
-      {
-        "q": "Monitor è:",
-        "options": [
-          "Input",
-          "Output",
-          "Cartella"
-        ],
-        "a": 1
-      },
-      {
-        "q": "Microfono è:",
-        "options": [
-          "Input",
-          "Output",
-          "SSD"
+          "Elaborare istruzioni",
+          "Stampare fogli",
+          "Proteggere dai virus"
         ],
         "a": 0
       },
       {
-        "q": "Touchscreen è:",
+        "q": "La scheda madre:",
+        "options": [
+          "Collega i componenti",
+          "È un programma di scrittura",
+          "È una password"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La tastiera è:",
+        "options": [
+          "Input",
+          "Output",
+          "Memoria permanente"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il monitor è:",
+        "options": [
+          "Output",
+          "Input",
+          "Sistema operativo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il microfono è:",
+        "options": [
+          "Input",
+          "Output",
+          "Browser"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La stampante è:",
+        "options": [
+          "Output",
+          "Input",
+          "CPU"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il touchscreen è:",
         "options": [
           "Input e output",
-          "Solo output",
+          "Solo input",
           "Solo memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Scanner è:",
-        "options": [
-          "Input",
-          "Output",
-          "Browser"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Casse audio sono:",
-        "options": [
-          "Output",
-          "Input",
-          "File"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Input significa:",
-        "options": [
-          "Entrata dati",
-          "Uscita dati",
-          "Cancellazione"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "date": "16 giugno",
-    "title": "Memorie del Computer",
-    "area": "Fondamenti",
-    "goal": "Studiare: Memorie del Computer.",
-    "theory": [
-      "La memoria conserva dati e programmi.",
-      "Il bit è l'unità più piccola. Le unità più usate sono KB, MB, GB e TB.",
-      "La RAM è temporanea: quando spegni il computer si svuota.",
-      "SSD e hard disk sono permanenti: conservano dati anche a computer spento."
-    ],
-    "detail": [
-      "RAM = tavolo da lavoro temporaneo del computer.",
-      "SSD/hard disk = armadio dove si conservano file e programmi.",
-      "All'orale ricorda: RAM temporanea, SSD permanente.",
-      "GB è più grande di MB; TB è più grande di GB."
-    ],
-    "map": [
-      "MEMORIA",
-      "Bit = più piccolo",
-      "KB → MB → GB → TB",
-      "RAM = temporanea",
-      "SSD/HDD = permanente"
-    ],
-    "oral": [
-      [
-        "RAM è:",
-        "Temporanea"
-      ],
-      [
-        "SSD è memoria:",
-        "Permanente"
-      ],
-      [
-        "Unità più piccola:",
-        "Bit"
-      ],
-      [
-        "Più grande tra MB e GB:",
-        "GB"
-      ],
-      [
-        "La memoria serve a:",
-        "Conservare dati"
-      ],
-      [
-        "Quando spegni il PC la RAM:",
-        "Si svuota"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "RAM è:",
-        "options": [
-          "Temporanea",
-          "Stampante",
-          "Browser"
-        ],
-        "a": 0
-      },
-      {
-        "q": "SSD è memoria:",
-        "options": [
-          "Permanente",
-          "Input",
-          "Output"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Unità più piccola:",
-        "options": [
-          "Bit",
-          "GB",
-          "TB"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Più grande tra MB e GB:",
-        "options": [
-          "GB",
-          "MB",
-          "Uguali"
-        ],
-        "a": 0
-      },
-      {
-        "q": "La memoria serve a:",
-        "options": [
-          "Conservare dati",
-          "Stampare",
-          "Navigare"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Quando spegni il PC la RAM:",
-        "options": [
-          "Si svuota",
-          "Resta uguale",
-          "Diventa cloud"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Hard disk conserva:",
-        "options": [
-          "Dati",
-          "Solo suoni",
-          "Solo browser"
-        ],
-        "a": 0
-      },
-      {
-        "q": "TB è:",
-        "options": [
-          "Più grande di GB",
-          "Più piccolo di KB",
-          "Uguale a bit"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "date": "17 giugno",
-    "title": "Sistema Operativo",
-    "area": "Fondamenti",
-    "goal": "Studiare: Sistema Operativo.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "date": "18 giugno",
-    "title": "File e Cartelle",
-    "area": "Fondamenti",
-    "goal": "Studiare: File e Cartelle.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "date": "19 giugno",
-    "title": "Ripasso Fondamenti",
-    "area": "Ripasso",
-    "goal": "Studiare: Ripasso Fondamenti.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "date": "20 giugno",
-    "title": "Microsoft Word",
-    "area": "Office",
-    "goal": "Studiare: Microsoft Word.",
-    "theory": [
-      "Word è un programma di videoscrittura.",
-      "Serve per creare documenti: relazioni, lettere e schede.",
-      "Con Word si può scrivere, correggere, formattare, inserire immagini e tabelle.",
-      "Formattare significa modificare l'aspetto del testo."
-    ],
-    "detail": [
-      "Word è utile a scuola perché permette di creare documenti ordinati.",
-      "Esempi di formattazione: grassetto, corsivo, sottolineato, grandezza carattere, allineamento.",
-      "Risposta orale pronta: Word è un software di videoscrittura per creare e formattare documenti."
-    ],
-    "map": [
-      "WORD",
-      "Documenti",
-      "Testo",
-      "Formattazione",
-      "Tabelle/immagini",
-      "Salva/stampa"
-    ],
-    "oral": [
-      [
-        "Word serve per:",
-        "Documenti"
-      ],
-      [
-        "Grassetto è:",
-        "Formattazione"
-      ],
-      [
-        "Corsivo è:",
-        "Formattazione"
-      ],
-      [
-        "Tabella serve a:",
-        "Ordinare dati"
-      ],
-      [
-        "Word è:",
-        "Software"
-      ],
-      [
-        "Salvare serve a:",
-        "Non perdere lavoro"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Word serve per:",
-        "options": [
-          "Documenti",
-          "Solo calcoli",
-          "Solo internet"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Grassetto è:",
-        "options": [
-          "Formattazione",
-          "Hardware",
-          "Virus"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Corsivo è:",
-        "options": [
-          "Formattazione",
-          "Input",
-          "Cloud"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Tabella serve a:",
-        "options": [
-          "Ordinare dati",
-          "Spegnere PC",
-          "Rubare dati"
         ],
         "a": 0
       },
@@ -793,34 +298,858 @@ const LESSONS = [
         "options": [
           "Software",
           "Hardware",
-          "Output"
+          "Periferica"
         ],
         "a": 0
       },
       {
-        "q": "Salvare serve a:",
+        "q": "Il mouse è:",
         "options": [
-          "Non perdere lavoro",
-          "Cancellare",
-          "Stampare sempre"
+          "Hardware di input",
+          "Software applicativo",
+          "File"
         ],
         "a": 0
       },
       {
-        "q": "Documento scolastico si fa con:",
+        "q": "La CPU viene chiamata:",
         "options": [
-          "Word",
-          "RAM",
-          "Mouse"
+          "Cervello del computer",
+          "Armadio dei file",
+          "Motore di ricerca"
         ],
         "a": 0
       },
       {
-        "q": "Allineamento è:",
+        "q": "Le casse audio sono:",
+        "options": [
+          "Output",
+          "Input",
+          "RAM"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "Modulo 3",
+    "title": "Memorie: RAM, SSD, hard disk e unità di misura",
+    "area": "Fondamenti",
+    "goal": "Capire la differenza tra memoria temporanea e memoria permanente.",
+    "theory": [
+      "La memoria serve a conservare dati, programmi e risultati.",
+      "La RAM è memoria temporanea: aiuta il computer mentre lavora, ma si svuota quando lo spegni.",
+      "SSD e hard disk sono memorie permanenti: conservano file e programmi anche a computer spento.",
+      "La chiavetta USB è una memoria esterna e trasportabile.",
+      "Le dimensioni si misurano in KB, MB, GB e TB."
+    ],
+    "detail": [
+      "Trucco forte: RAM = tavolo da lavoro. SSD/HDD = armadio. Sul tavolo lavori, nell'armadio conservi.",
+      "Se apri Word, il programma usa la RAM per funzionare velocemente. Quando salvi il documento, il file va su SSD o hard disk.",
+      "SSD è più veloce e moderno dell'hard disk tradizionale. L'hard disk ha parti meccaniche; l'SSD usa memoria elettronica.",
+      "Memoria interna = dentro al computer. Memoria esterna = chiavetta USB, hard disk esterno, scheda SD.",
+      "Errore tipico: dire che la RAM salva i documenti per sempre. No: se non salvi, allo spegnimento perdi il lavoro."
+    ],
+    "map": [
+      "MEMORIE",
+      "RAM = temporanea",
+      "SSD/HDD = permanente",
+      "USB = esterna",
+      "Salvare = conservare",
+      "KB MB GB TB"
+    ],
+    "oral": [
+      [
+        "Differenza RAM e SSD?",
+        "RAM temporanea, SSD permanente."
+      ],
+      [
+        "Cosa succede alla RAM quando spengo il PC?",
+        "Si svuota."
+      ],
+      [
+        "Dove resta salvato un file?",
+        "Su SSD, hard disk o memoria esterna."
+      ],
+      [
+        "Cos'è una chiavetta USB?",
+        "Memoria esterna trasportabile."
+      ],
+      [
+        "Quale è più grande tra MB e GB?",
+        "GB."
+      ],
+      [
+        "Perché devo salvare un documento?",
+        "Per non perderlo."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "La RAM è memoria:",
+        "options": [
+          "Temporanea",
+          "Permanente",
+          "Di carta"
+        ],
+        "a": 0
+      },
+      {
+        "q": "SSD e hard disk sono memorie:",
+        "options": [
+          "Permanenti",
+          "Sempre temporanee",
+          "Di input"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando spegni il PC la RAM:",
+        "options": [
+          "Si svuota",
+          "Diventa più grande",
+          "Stampa i file"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La chiavetta USB è:",
+        "options": [
+          "Memoria esterna",
+          "CPU",
+          "Browser"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il file salvato resta su:",
+        "options": [
+          "SSD o hard disk",
+          "Solo RAM",
+          "Monitor"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il trucco corretto è:",
+        "options": [
+          "RAM tavolo, SSD armadio",
+          "RAM armadio, SSD tastiera",
+          "CPU armadio, mouse cloud"
+        ],
+        "a": 0
+      },
+      {
+        "q": "SSD rispetto a hard disk meccanico è spesso:",
+        "options": [
+          "Più veloce",
+          "Sempre più lento",
+          "Un antivirus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "GB è:",
+        "options": [
+          "Più grande di MB",
+          "Più piccolo di KB",
+          "Uguale a bit"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una scheda SD è:",
+        "options": [
+          "Memoria esterna",
+          "Sistema operativo",
+          "Formula Excel"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Salvare un documento serve a:",
+        "options": [
+          "Conservarlo",
+          "Cancellarlo",
+          "Trasformarlo in virus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La memoria permanente conserva dati:",
+        "options": [
+          "Anche a PC spento",
+          "Solo con monitor acceso",
+          "Solo mentre scrivi"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La RAM aiuta il computer:",
+        "options": [
+          "Mentre lavora",
+          "A stampare senza stampante",
+          "A collegarsi sempre a Google"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "date": "Modulo 4",
+    "title": "Software, sistema operativo e driver",
+    "area": "Fondamenti",
+    "goal": "Distinguere software di sistema, software applicativo e sistema operativo.",
+    "theory": [
+      "Il software è l'insieme dei programmi che fanno funzionare il computer.",
+      "Il sistema operativo è il programma principale: gestisce hardware, file, memoria e applicazioni.",
+      "Windows, macOS, Linux, Android e iOS sono sistemi operativi.",
+      "Il software applicativo serve a svolgere compiti: Word, Excel, PowerPoint, browser, antivirus.",
+      "I driver aiutano il sistema operativo a comunicare con periferiche come stampanti e schede video."
+    ],
+    "detail": [
+      "Software = parte non fisica. Non si tocca, si usa sullo schermo.",
+      "Sistema operativo = direttore d'orchestra: coordina tutte le parti del computer.",
+      "Applicazione = programma per fare una cosa specifica: scrivere, calcolare, navigare, presentare.",
+      "Driver = traduttore tra computer e periferica. Senza driver una stampante può non funzionare bene.",
+      "Errore tipico: dire che Windows e Word sono uguali. Windows fa funzionare il PC; Word serve a scrivere documenti."
+    ],
+    "map": [
+      "SOFTWARE",
+      "Sistema operativo",
+      "Applicazioni",
+      "Driver",
+      "Windows gestisce",
+      "Word/Excel lavorano"
+    ],
+    "oral": [
+      [
+        "Cos'è il software?",
+        "L'insieme dei programmi."
+      ],
+      [
+        "Cos'è il sistema operativo?",
+        "Il programma principale che gestisce il computer."
+      ],
+      [
+        "Esempio di sistema operativo?",
+        "Windows, macOS, Linux, Android o iOS."
+      ],
+      [
+        "Cos'è un'applicazione?",
+        "Un programma per svolgere un compito specifico."
+      ],
+      [
+        "A cosa serve un driver?",
+        "A far comunicare sistema operativo e periferica."
+      ],
+      [
+        "Word è sistema operativo?",
+        "No, è software applicativo."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Software significa:",
+        "options": [
+          "Programmi",
+          "Parti fisiche",
+          "Cavi elettrici"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Windows è:",
+        "options": [
+          "Sistema operativo",
+          "Foglio elettronico",
+          "Stampante"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Word è:",
+        "options": [
+          "Software applicativo",
+          "Scheda madre",
+          "Memoria RAM"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il sistema operativo gestisce:",
+        "options": [
+          "Hardware e programmi",
+          "Solo colori",
+          "Solo password"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un driver serve a:",
+        "options": [
+          "Far funzionare una periferica",
+          "Scrivere poesie",
+          "Fare grafici"
+        ],
+        "a": 0
+      },
+      {
+        "q": "macOS è:",
+        "options": [
+          "Sistema operativo",
+          "Motore di ricerca",
+          "File"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Android è:",
+        "options": [
+          "Sistema operativo",
+          "Antivirus",
+          "Tastiera"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Excel è:",
+        "options": [
+          "Applicazione",
+          "CPU",
+          "Router"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il software si può toccare fisicamente?",
+        "options": [
+          "No",
+          "Sì sempre",
+          "Solo se è Word"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il sistema operativo è come:",
+        "options": [
+          "Un direttore d'orchestra",
+          "Una penna",
+          "Una stampante spenta"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Antivirus è:",
+        "options": [
+          "Software applicativo di sicurezza",
+          "Hardware di output",
+          "Cella Excel"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Errore tipico:",
+        "options": [
+          "Confondere Windows con Word",
+          "Dire che Windows gestisce il PC",
+          "Dire che Word scrive documenti"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "Modulo 5",
+    "title": "Windows, file, cartelle ed estensioni",
+    "area": "Fondamenti",
+    "goal": "Imparare a gestire file e cartelle in modo ordinato.",
+    "theory": [
+      "Un file è un documento digitale: testo, foto, video, presentazione, foglio Excel.",
+      "Una cartella è un contenitore che serve a organizzare i file.",
+      "L'estensione indica il tipo di file: .docx, .xlsx, .pptx, .pdf, .jpg.",
+      "Le operazioni fondamentali sono creare, salvare, copiare, tagliare, incollare, rinominare ed eliminare.",
+      "Un buon nome file aiuta a ritrovarlo: per esempio Relazione_ulivo_Arianna.docx."
+    ],
+    "detail": [
+      "File = singolo oggetto digitale. Cartella = scatola dove metto più file.",
+      "Copia crea un duplicato; taglia sposta l'elemento; incolla completa l'operazione.",
+      "Eliminare sposta nel cestino; svuotare il cestino cancella definitivamente.",
+      "Estensioni importanti: .docx Word, .xlsx Excel, .pptx PowerPoint, .pdf documento non facilmente modificabile, .jpg immagine.",
+      "Errore tipico: salvare tutto sul desktop senza cartelle. È meglio creare cartelle per materia o argomento."
+    ],
+    "map": [
+      "WINDOWS",
+      "File",
+      "Cartelle",
+      "Estensioni",
+      "Copia/taglia/incolla",
+      "Cestino",
+      "Organizzazione"
+    ],
+    "oral": [
+      [
+        "Cos'è un file?",
+        "Un documento o contenuto digitale."
+      ],
+      [
+        "Cos'è una cartella?",
+        "Un contenitore per organizzare file."
+      ],
+      [
+        "Cosa indica .docx?",
+        "Documento Word."
+      ],
+      [
+        "Differenza copia e taglia?",
+        "Copia duplica, taglia sposta."
+      ],
+      [
+        "A cosa serve il cestino?",
+        "A contenere elementi eliminati prima della cancellazione definitiva."
+      ],
+      [
+        "Perché dare nomi chiari ai file?",
+        "Per ritrovarli facilmente."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Un file è:",
+        "options": [
+          "Un documento digitale",
+          "Sempre una cartella",
+          "Sempre un virus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una cartella serve a:",
+        "options": [
+          "Organizzare file",
+          "Fare calcoli",
+          "Navigare"
+        ],
+        "a": 0
+      },
+      {
+        "q": ".docx indica:",
+        "options": [
+          "Documento Word",
+          "Foglio Excel",
+          "Immagine"
+        ],
+        "a": 0
+      },
+      {
+        "q": ".xlsx indica:",
+        "options": [
+          "File Excel",
+          "File audio",
+          "Sistema operativo"
+        ],
+        "a": 0
+      },
+      {
+        "q": ".pptx indica:",
+        "options": [
+          "Presentazione PowerPoint",
+          "Foto",
+          "Driver"
+        ],
+        "a": 0
+      },
+      {
+        "q": ".jpg è spesso:",
+        "options": [
+          "Immagine",
+          "Formula",
+          "Cartella"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Copia significa:",
+        "options": [
+          "Creare duplicato",
+          "Spostare senza lasciare copia",
+          "Spegnere"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Taglia significa:",
+        "options": [
+          "Spostare",
+          "Stampare",
+          "Creare virus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Il cestino contiene:",
+        "options": [
+          "File eliminati",
+          "Solo email",
+          "Solo RAM"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un nome file corretto è:",
+        "options": [
+          "Relazione_ulivo_Arianna.docx",
+          "Nuovo documento finale finale davvero ultimo",
+          "???"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per ritrovare i file conviene:",
+        "options": [
+          "Usare cartelle ordinate",
+          "Mettere tutto a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "PDF è:",
+        "options": [
+          "Documento spesso usato per stampa e invio",
+          "CPU",
+          "Input"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "date": "Modulo 6",
+    "title": "Microsoft Word: scrivere e formattare documenti",
+    "area": "Office",
+    "goal": "Usare Word per creare documenti ordinati e leggibili.",
+    "theory": [
+      "Word è un programma di videoscrittura: serve per creare documenti, relazioni, lettere e schede",
+      "In Word si può scrivere testo, correggere errori, cambiare carattere, usare grassetto, corsivo, sottolineato, elenchi, allineamenti, immagini e tabelle",
+      "Formattare significa modificare l'aspetto del testo per renderlo più chiaro."
+    ],
+    "detail": [
+      "Word è un software di videoscrittura.",
+      "Grassetto evidenzia parole importanti; corsivo segnala termini particolari; sottolineato mette in risalto.",
+      "Allineamento: sinistra, centro, destra, giustificato.",
+      "Un documento scolastico deve avere titolo, testo ordinato, eventuali immagini, tabelle e nome dell'autore.",
+      "Errore tipico: usare troppi colori e caratteri diversi; meglio semplice e leggibile."
+    ],
+    "map": [
+      "WORD",
+      "Documento",
+      "Testo",
+      "Formattazione",
+      "Titolo",
+      "Paragrafi",
+      "Salva e stampa"
+    ],
+    "oral": [
+      [
+        "Cos'è Word?",
+        "Risposta breve: cos'è word."
+      ],
+      [
+        "Cosa significa formattare?",
+        "Risposta breve: cosa significa formattare."
+      ],
+      [
+        "A cosa serve il grassetto?",
+        "Risposta breve: a cosa serve il grassetto."
+      ],
+      [
+        "Cos'è un paragrafo?",
+        "Risposta breve: cos'è un paragrafo."
+      ],
+      [
+        "Come salvo un documento?",
+        "Risposta breve: come salvo un documento."
+      ],
+      [
+        "Perché è importante l'impaginazione?",
+        "Risposta breve: perché è importante l'impaginazione."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Word serve per:",
+        "options": [
+          "Scrivere documenti",
+          "Fare solo calcoli",
+          "Installare driver"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Formattare significa:",
+        "options": [
+          "Cambiare aspetto del testo",
+          "Spegnere PC",
+          "Cancellare RAM"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Grassetto serve a:",
+        "options": [
+          "Evidenziare",
+          "Navigare",
+          "Fare medie"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Corsivo è:",
         "options": [
           "Formattazione",
-          "Sistema operativo",
-          "SSD"
+          "Hardware",
+          "Virus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Allineamento al centro riguarda:",
+        "options": [
+          "Posizione del testo",
+          "Velocità internet",
+          "Memoria"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un documento ordinato ha:",
+        "options": [
+          "Titolo e paragrafi chiari",
+          "Solo emoji",
+          "Nessun salvataggio"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per non perdere il lavoro devo:",
+        "options": [
+          "Salvare",
+          "Chiudere senza salvare",
+          "Staccare corrente"
+        ],
+        "a": 0
+      },
+      {
+        "q": ".docx è:",
+        "options": [
+          "File Word",
+          "File Excel",
+          "Foto"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una tabella in Word serve a:",
+        "options": [
+          "Organizzare dati in righe e colonne",
+          "Aumentare RAM",
+          "Cercare su Google"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Stampa serve a:",
+        "options": [
+          "Portare il documento su carta",
+          "Copiare RAM",
+          "Creare password"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Troppi colori nel testo:",
+        "options": [
+          "Rendono il documento confuso",
+          "Sono sempre obbligatori",
+          "Sono hardware"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Titolo in una relazione serve a:",
+        "options": [
+          "Far capire l'argomento",
+          "Nascondere il testo",
+          "Eliminare immagini"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "date": "Modulo 7",
+    "title": "Word: tabelle, immagini, intestazione e stampa",
+    "area": "Office",
+    "goal": "Completare un documento Word con elementi utili e corretti.",
+    "theory": [
+      "In Word si possono inserire tabelle per ordinare dati, immagini per spiegare meglio, intestazioni e piè di pagina per ripetere informazioni",
+      "Una tabella è formata da righe e colonne",
+      "Prima di stampare bisogna controllare anteprima, margini, orientamento e numero di pagine."
+    ],
+    "detail": [
+      "Tabella = griglia con righe e colonne, utile per confrontare dati.",
+      "Immagine = aiuta a capire, ma deve essere pertinente e non troppo grande.",
+      "Intestazione = zona alta della pagina; piè di pagina = zona bassa.",
+      "Prima di consegnare: controllo ortografia, titolo, nome, margini e salvataggio.",
+      "Esempio agrario: tabella con coltura, periodo di semina, irrigazione e raccolta."
+    ],
+    "map": [
+      "WORD AVANZATO",
+      "Tabelle",
+      "Immagini",
+      "Intestazione",
+      "Piè di pagina",
+      "Anteprima",
+      "Stampa"
+    ],
+    "oral": [
+      [
+        "Cos'è una tabella?",
+        "Risposta breve: cos'è una tabella."
+      ],
+      [
+        "A cosa serve inserire un'immagine?",
+        "Risposta breve: a cosa serve inserire un'immagine."
+      ],
+      [
+        "Cos'è l'intestazione?",
+        "Risposta breve: cos'è l'intestazione."
+      ],
+      [
+        "Cos'è il piè di pagina?",
+        "Risposta breve: cos'è il piè di pagina."
+      ],
+      [
+        "Cosa controllo prima di stampare?",
+        "Risposta breve: cosa controllo prima di stampare."
+      ],
+      [
+        "Esempio di tabella agraria?",
+        "Risposta breve: esempio di tabella agraria."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Una tabella è formata da:",
+        "options": [
+          "Righe e colonne",
+          "Solo immagini",
+          "Solo suoni"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Le immagini in una relazione servono a:",
+        "options": [
+          "Spiegare meglio",
+          "Rallentare sempre",
+          "Cancellare testo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Intestazione si trova:",
+        "options": [
+          "In alto nella pagina",
+          "Solo nel cestino",
+          "Dentro la CPU"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Piè di pagina si trova:",
+        "options": [
+          "In basso nella pagina",
+          "Nel router",
+          "Nel browser"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Prima di stampare controllo:",
+        "options": [
+          "Anteprima e margini",
+          "Solo la RAM",
+          "Solo il mouse"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una tabella agraria può contenere:",
+        "options": [
+          "Coltura e irrigazione",
+          "Password di tutti",
+          "Virus"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Controllo ortografia serve a:",
+        "options": [
+          "Correggere errori",
+          "Fare grafici",
+          "Aprire internet"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Margini sono:",
+        "options": [
+          "Spazi ai bordi della pagina",
+          "Numeri di Excel",
+          "Cavi"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Orientamento pagina può essere:",
+        "options": [
+          "Verticale o orizzontale",
+          "Caldo o freddo",
+          "LAN o WAN"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un'immagine troppo grande:",
+        "options": [
+          "Può rovinare impaginazione",
+          "È sempre obbligatoria",
+          "È un sistema operativo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Salvare prima di stampare:",
+        "options": [
+          "È consigliato",
+          "È vietato",
+          "Cancella tutto"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La tabella aiuta a:",
+        "options": [
+          "Ordinare informazioni",
+          "Distruggere file",
+          "Misurare corrente"
         ],
         "a": 0
       }
@@ -828,187 +1157,71 @@ const LESSONS = [
   },
   {
     "id": 8,
-    "date": "21 giugno",
-    "title": "Word: Tabelle e Immagini",
+    "date": "Modulo 8",
+    "title": "Microsoft Excel: celle, righe, colonne e fogli",
     "area": "Office",
-    "goal": "Studiare: Word: Tabelle e Immagini.",
+    "goal": "Capire la struttura di Excel e usare celle e tabelle semplici.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "Excel è un foglio elettronico",
+      "Serve per organizzare dati, fare calcoli automatici e creare grafici",
+      "Il foglio è formato da righe numerate, colonne con lettere e celle",
+      "Una cella è l'incrocio tra riga e colonna, per esempio A1",
+      "Un intervallo è un gruppo di celle, per esempio A1:A10."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "date": "22 giugno",
-    "title": "Microsoft Excel",
-    "area": "Office",
-    "goal": "Studiare: Microsoft Excel.",
-    "theory": [
-      "Excel è un foglio elettronico.",
-      "Serve per organizzare dati, fare calcoli e creare grafici.",
-      "Il foglio è formato da celle, righe e colonne.",
-      "Le formule iniziano con =.",
-      "In agraria può servire per spese, produzioni, magazzino e temperature."
-    ],
-    "detail": [
-      "Excel non serve principalmente per testi lunghi, ma per dati e calcoli.",
-      "Una cella è l'incrocio tra una riga e una colonna: A1, B2, C3.",
-      "Le formule permettono calcoli automatici e riducono gli errori.",
-      "I grafici mostrano i dati in modo visivo."
+      "Excel è perfetto per numeri e tabelle, non per testi lunghi.",
+      "Cella A1 = colonna A, riga 1.",
+      "Un intervallo come B2:B8 comprende tutte le celle dalla B2 alla B8.",
+      "In agraria può gestire raccolti, costi, irrigazioni, magazzino, presenze e temperature.",
+      "Errore tipico: scrivere formule senza il segno =."
     ],
     "map": [
       "EXCEL",
       "Foglio elettronico",
-      "Celle",
-      "Righe/colonne",
-      "Formule",
-      "Grafici",
-      "Agraria"
+      "Colonne = lettere",
+      "Righe = numeri",
+      "Cella = A1",
+      "Intervallo",
+      "Dati"
     ],
     "oral": [
       [
-        "Excel serve per:",
-        "Dati e calcoli"
+        "Cos'è Excel?",
+        "Risposta breve: cos'è excel."
       ],
       [
-        "Cella è:",
-        "Incrocio riga-colonna"
+        "Cos'è una cella?",
+        "Risposta breve: cos'è una cella."
       ],
       [
-        "Colonne sono:",
-        "Lettere"
+        "Come si indicano le colonne?",
+        "Risposta breve: come si indicano le colonne."
       ],
       [
-        "Righe sono:",
-        "Numeri"
+        "Come si indicano le righe?",
+        "Risposta breve: come si indicano le righe."
       ],
       [
-        "Formule iniziano con:",
-        "="
+        "Cos'è un intervallo?",
+        "Risposta breve: cos'è un intervallo."
       ],
       [
-        "Grafico serve a:",
-        "Mostrare dati"
+        "A cosa serve Excel in agraria?",
+        "Risposta breve: a cosa serve excel in agraria."
       ]
     ],
     "quiz": [
       {
-        "q": "Excel serve per:",
+        "q": "Excel è:",
         "options": [
-          "Dati e calcoli",
-          "Solo testi",
-          "Solo foto"
+          "Foglio elettronico",
+          "Videoscrittura",
+          "Sistema operativo"
         ],
         "a": 0
       },
       {
-        "q": "Cella è:",
-        "options": [
-          "Incrocio riga-colonna",
-          "Stampante",
-          "Virus"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Colonne sono:",
+        "q": "Le colonne sono indicate con:",
         "options": [
           "Lettere",
           "Numeri",
@@ -1017,7 +1230,7 @@ const LESSONS = [
         "a": 0
       },
       {
-        "q": "Righe sono:",
+        "q": "Le righe sono indicate con:",
         "options": [
           "Numeri",
           "Lettere",
@@ -1026,38 +1239,249 @@ const LESSONS = [
         "a": 0
       },
       {
-        "q": "Formule iniziano con:",
+        "q": "A1 è:",
+        "options": [
+          "Una cella",
+          "Un virus",
+          "Una stampante"
+        ],
+        "a": 0
+      },
+      {
+        "q": "La cella è:",
+        "options": [
+          "Incrocio riga-colonna",
+          "Un programma",
+          "Un cavo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "A1:A10 è:",
+        "options": [
+          "Intervallo",
+          "Browser",
+          "Password"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Excel è utile per:",
+        "options": [
+          "Calcoli e dati",
+          "Solo testi lunghi",
+          "Solo disegni"
+        ],
+        "a": 0
+      },
+      {
+        "q": "In agraria Excel può registrare:",
+        "options": [
+          "Produzione raccolto",
+          "Solo canzoni",
+          "Solo giochi"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Le formule iniziano con:",
         "options": [
           "=",
-          "@",
-          "#"
+          "#",
+          "?"
         ],
         "a": 0
       },
       {
-        "q": "Grafico serve a:",
+        "q": "Una tabella Excel contiene:",
         "options": [
-          "Mostrare dati",
-          "Spegnere PC",
-          "Mandare email"
+          "Dati organizzati",
+          "Solo pagine web",
+          "Solo immagini casuali"
         ],
         "a": 0
       },
       {
-        "q": "A1 indica:",
+        "q": "Se devo fare una media uso:",
         "options": [
-          "Cella",
-          "Virus",
-          "Browser"
+          "Excel",
+          "Solo Paint",
+          "Il cestino"
         ],
         "a": 0
       },
       {
-        "q": "In agraria Excel registra:",
+        "q": "Errore tipico:",
         "options": [
-          "Produzioni",
-          "Solo musica",
-          "Solo giochi"
+          "Dimenticare = nelle formule",
+          "Usare celle",
+          "Salvare il file"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "date": "Modulo 9",
+    "title": "Excel: formule SOMMA, MEDIA, MAX e MIN",
+    "area": "Office",
+    "goal": "Usare le formule base più probabili all'esame.",
+    "theory": [
+      "Le formule di Excel fanno calcoli automatici",
+      "Ogni formula inizia con =",
+      "SOMMA aggiunge valori, MEDIA calcola il valore medio, MAX trova il numero più alto, MIN trova il numero più basso",
+      "Esempi: =SOMMA(A1:A10), =MEDIA(B2:B8), =MAX(C1:C12), =MIN(C1:C12)."
+    ],
+    "detail": [
+      "Il segno = dice a Excel: adesso devi calcolare.",
+      "SOMMA(A1:A5) somma le celle da A1 ad A5.",
+      "MEDIA è molto usata per voti, temperature, produzioni medie.",
+      "MAX e MIN servono per trovare valore massimo e minimo senza cercare a mano.",
+      "Errore tipico: scrivere SOMMA senza = oppure sbagliare parentesi."
+    ],
+    "map": [
+      "FORMULE",
+      "=",
+      "SOMMA",
+      "MEDIA",
+      "MAX",
+      "MIN",
+      "Intervallo",
+      "Risultato automatico"
+    ],
+    "oral": [
+      [
+        "Da cosa inizia una formula?",
+        "Risposta breve: da cosa inizia una formula."
+      ],
+      [
+        "A cosa serve SOMMA?",
+        "Risposta breve: a cosa serve somma."
+      ],
+      [
+        "A cosa serve MEDIA?",
+        "Risposta breve: a cosa serve media."
+      ],
+      [
+        "A cosa serve MAX?",
+        "Risposta breve: a cosa serve max."
+      ],
+      [
+        "A cosa serve MIN?",
+        "Risposta breve: a cosa serve min."
+      ],
+      [
+        "Fai un esempio di formula.",
+        "Risposta breve: fai un esempio di formula.."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Una formula in Excel inizia con:",
+        "options": [
+          "=",
+          "&",
+          "!"
+        ],
+        "a": 0
+      },
+      {
+        "q": "=SOMMA(A1:A5) serve a:",
+        "options": [
+          "Somma da A1 ad A5",
+          "Cancellare celle",
+          "Aprire browser"
+        ],
+        "a": 0
+      },
+      {
+        "q": "MEDIA calcola:",
+        "options": [
+          "Valore medio",
+          "Valore più alto",
+          "Password"
+        ],
+        "a": 0
+      },
+      {
+        "q": "MAX trova:",
+        "options": [
+          "Valore più alto",
+          "Valore più basso",
+          "Testo più bello"
+        ],
+        "a": 0
+      },
+      {
+        "q": "MIN trova:",
+        "options": [
+          "Valore più basso",
+          "Valore medio",
+          "Sistema operativo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "=MEDIA(B1:B4) usa:",
+        "options": [
+          "Intervallo B1-B4",
+          "Solo cella A1",
+          "Il monitor"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per temperature medie uso:",
+        "options": [
+          "MEDIA",
+          "MAX soltanto",
+          "Cestino"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per produzione più alta uso:",
+        "options": [
+          "MAX",
+          "MIN",
+          "WordArt"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per spesa totale uso:",
+        "options": [
+          "SOMMA",
+          "Browser",
+          "Corsivo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Errore formula comune:",
+        "options": [
+          "Dimenticare =",
+          "Salvare file",
+          "Usare numeri"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Le parentesi in formula:",
+        "options": [
+          "Racchiudono l'intervallo",
+          "Stampano carta",
+          "Spengono PC"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Excel aggiorna il risultato:",
+        "options": [
+          "Automaticamente se cambiano i dati",
+          "Mai",
+          "Solo con penna"
         ],
         "a": 0
       }
@@ -1065,107 +1489,166 @@ const LESSONS = [
   },
   {
     "id": 10,
-    "date": "23 giugno",
-    "title": "Excel: Formule",
+    "date": "Modulo 10",
+    "title": "Excel: grafici e lettura dei dati",
     "area": "Office",
-    "goal": "Studiare: Excel: Formule.",
+    "goal": "Creare e leggere grafici semplici.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "Un grafico rappresenta i dati in modo visivo",
+      "I grafici più comuni sono colonne, linee e torta",
+      "Prima si selezionano i dati, poi si inserisce il grafico",
+      "Il titolo deve spiegare cosa rappresenta",
+      "In agraria un grafico può mostrare temperatura, pioggia, produzione o costi."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
+      "Un grafico rappresenta i dati in modo visivo. I grafici più comuni sono colonne, linee e torta. Prima si selezionano i dati, poi si inserisce il grafico. Il titolo deve spiegare cosa rappresenta. In agraria un grafico può mostrare temperatura, pioggia, produzione o costi.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
+      "GRAFICI",
+      "Dati",
+      "Selezione",
+      "Colonne",
+      "Linee",
+      "Torta",
+      "Titolo",
+      "Lettura"
     ],
     "oral": [
       [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
+        "Spiega: GRAFICI",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Se ti blocchi:",
-        "Respiri e riparti"
+        "Spiega: Dati",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Per DSA è utile:",
-        "Mappa concettuale"
+        "Spiega: Selezione",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Risposta deve essere:",
-        "Chiara"
+        "Spiega: Colonne",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Esempio pratico aiuta?",
-        "Sì"
+        "Spiega: Linee",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Formula utile:",
-        "È… serve a… per esempio…"
+        "Spiega: Torta",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Metodo migliore:",
+        "q": "Un grafico serve a:",
         "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
+          "Visualizzare dati",
+          "Scrivere poesie",
+          "Installare Windows"
         ],
         "a": 0
       },
       {
-        "q": "Se ti blocchi:",
+        "q": "Grafico a linee è utile per:",
         "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
+          "Andamento nel tempo",
+          "Elenco password",
+          "Stampare driver"
         ],
         "a": 0
       },
       {
-        "q": "Per DSA è utile:",
+        "q": "Grafico a torta mostra:",
         "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
+          "Parti di un totale",
+          "Righe di testo",
+          "Cartelle"
         ],
         "a": 0
       },
       {
-        "q": "Risposta deve essere:",
+        "q": "Prima di creare grafico devo:",
         "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
+          "Selezionare i dati",
+          "Spegnere il PC",
+          "Aprire antivirus"
         ],
         "a": 0
       },
       {
-        "q": "Esempio pratico aiuta?",
+        "q": "Il titolo del grafico deve:",
         "options": [
-          "Sì",
-          "No",
-          "Mai"
+          "Spiegare cosa rappresenta",
+          "Essere assente",
+          "Essere una password"
         ],
         "a": 0
       },
       {
-        "q": "Formula utile:",
+        "q": "In agraria un grafico può mostrare:",
         "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "Pioggia o produzione",
+          "Solo virus",
+          "Solo mouse"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Grafico a colonne confronta:",
+        "options": [
+          "Valori diversi",
+          "Solo file PDF",
+          "Tasti tastiera"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Excel: grafici e lettura dei dati: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -1173,107 +1656,165 @@ const LESSONS = [
   },
   {
     "id": 11,
-    "date": "24 giugno",
-    "title": "Excel: Grafici",
+    "date": "Modulo 11",
+    "title": "PowerPoint: presentazioni efficaci",
     "area": "Office",
-    "goal": "Studiare: Excel: Grafici.",
+    "goal": "Creare slide chiare per esporre un argomento.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "PowerPoint serve per creare presentazioni composte da slide",
+      "Una slide deve avere poco testo, titolo chiaro, immagini utili e ordine",
+      "Le transizioni sono passaggi tra slide; le animazioni sono movimenti degli oggetti",
+      "Una buona presentazione aiuta a parlare, non deve essere letta tutta."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
+      "PowerPoint serve per creare presentazioni composte da slide. Una slide deve avere poco testo, titolo chiaro, immagini utili e ordine. Le transizioni sono passaggi tra slide; le animazioni sono movimenti degli oggetti. Una buona presentazione aiuta a parlare, non deve essere letta tutta.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
+      "POWERPOINT",
+      "Slide",
+      "Titolo",
+      "Poco testo",
+      "Immagini",
+      "Transizioni",
+      "Animazioni",
+      "Esposizione"
     ],
     "oral": [
       [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
+        "Spiega: POWERPOINT",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Se ti blocchi:",
-        "Respiri e riparti"
+        "Spiega: Slide",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Per DSA è utile:",
-        "Mappa concettuale"
+        "Spiega: Titolo",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Risposta deve essere:",
-        "Chiara"
+        "Spiega: Poco testo",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Esempio pratico aiuta?",
-        "Sì"
+        "Spiega: Immagini",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Formula utile:",
-        "È… serve a… per esempio…"
+        "Spiega: Transizioni",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Metodo migliore:",
+        "q": "PowerPoint è per:",
         "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
+          "Presentazioni",
+          "Calcoli automatici",
+          "Antivirus"
         ],
         "a": 0
       },
       {
-        "q": "Se ti blocchi:",
+        "q": "Una slide dovrebbe avere:",
         "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
+          "Poco testo e idee chiare",
+          "Tutto il libro copiato",
+          "Solo formule"
         ],
         "a": 0
       },
       {
-        "q": "Per DSA è utile:",
+        "q": "Transizione è:",
         "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
+          "Passaggio tra slide",
+          "Virus",
+          "Tipo di RAM"
         ],
         "a": 0
       },
       {
-        "q": "Risposta deve essere:",
+        "q": "Animazione è:",
         "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
+          "Movimento di un oggetto nella slide",
+          "Estensione file",
+          "Password"
         ],
         "a": 0
       },
       {
-        "q": "Esempio pratico aiuta?",
+        "q": "Durante esposizione:",
         "options": [
-          "Sì",
-          "No",
-          "Mai"
+          "Parlo guardando la classe",
+          "Leggo tutto senza capire",
+          "Nascondo titolo"
         ],
         "a": 0
       },
       {
-        "q": "Formula utile:",
+        "q": "Immagini nelle slide:",
         "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "Devono essere utili",
+          "Devono coprire tutto",
+          "Sono vietate"
+        ],
+        "a": 0
+      },
+      {
+        "q": ".pptx è:",
+        "options": [
+          "File PowerPoint",
+          "File Excel",
+          "Foto"
+        ],
+        "a": 0
+      },
+      {
+        "q": "PowerPoint: presentazioni efficaci: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -1281,160 +1822,56 @@ const LESSONS = [
   },
   {
     "id": 12,
-    "date": "25 giugno",
-    "title": "PowerPoint",
-    "area": "Office",
-    "goal": "Studiare: PowerPoint.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "date": "26 giugno",
-    "title": "Internet e Browser",
+    "date": "Modulo 12",
+    "title": "Internet, web, browser e motori di ricerca",
     "area": "Internet",
-    "goal": "Studiare: Internet e Browser.",
+    "goal": "Non confondere Internet, web, browser e Google.",
     "theory": [
-      "Internet è una rete mondiale che collega dispositivi.",
-      "Il web è l'insieme di siti e pagine.",
-      "Il browser è il programma per navigare: Chrome, Edge, Safari, Firefox.",
-      "Google è un motore di ricerca, non un browser."
+      "Internet è la rete mondiale che collega dispositivi",
+      "Il web è l'insieme delle pagine e dei siti",
+      "Il browser è il programma per navigare, come Chrome, Safari, Edge o Firefox",
+      "Google è un motore di ricerca: aiuta a trovare informazioni, ma non è Internet e non è sempre il browser."
     ],
     "detail": [
-      "Differenza importante: Internet è la rete, web sono le pagine, browser è il programma, Google cerca informazioni.",
-      "Esempio: apro Safari, vado su Google, cerco una pagina web usando Internet.",
-      "Questa domanda viene spesso fatta perché molti confondono browser e motore di ricerca."
+      "Internet è la rete mondiale che collega dispositivi. Il web è l'insieme delle pagine e dei siti. Il browser è il programma per navigare, come Chrome, Safari, Edge o Firefox. Google è un motore di ricerca: aiuta a trovare informazioni, ma non è Internet e non è sempre il browser.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
       "INTERNET",
       "Rete mondiale",
       "Web = siti",
       "Browser = naviga",
-      "Google = cerca"
+      "Google = cerca",
+      "URL",
+      "Sito"
     ],
     "oral": [
       [
-        "Internet è:",
-        "Rete mondiale"
+        "Spiega: INTERNET",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Browser è:",
-        "Programma per navigare"
+        "Spiega: Rete mondiale",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Safari è:",
-        "Browser"
+        "Spiega: Web = siti",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Google è:",
-        "Motore di ricerca"
+        "Spiega: Browser = naviga",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Web è:",
-        "Siti e pagine"
+        "Spiega: Google = cerca",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Chrome è:",
-        "Browser"
+        "Spiega: URL",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
@@ -1442,8 +1879,17 @@ const LESSONS = [
         "q": "Internet è:",
         "options": [
           "Rete mondiale",
-          "Stampante",
-          "Cartella"
+          "Browser",
+          "Solo Google"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Web è:",
+        "options": [
+          "Siti e pagine",
+          "Cavo HDMI",
+          "RAM"
         ],
         "a": 0
       },
@@ -1452,16 +1898,7 @@ const LESSONS = [
         "options": [
           "Programma per navigare",
           "Motore elettrico",
-          "File"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Safari è:",
-        "options": [
-          "Browser",
-          "Virus",
-          "Excel"
+          "Stampante"
         ],
         "a": 0
       },
@@ -1475,38 +1912,239 @@ const LESSONS = [
         "a": 0
       },
       {
-        "q": "Web è:",
-        "options": [
-          "Siti e pagine",
-          "Hardware",
-          "RAM"
-        ],
-        "a": 0
-      },
-      {
         "q": "Chrome è:",
         "options": [
           "Browser",
-          "Foglio Excel",
-          "Input"
+          "Motore di ricerca solo",
+          "CPU"
         ],
         "a": 0
       },
       {
-        "q": "Internet permette:",
+        "q": "URL è:",
         "options": [
-          "Email e cloud",
-          "Solo stampa",
-          "Solo tastiera"
+          "Indirizzo di una pagina web",
+          "Formula Excel",
+          "Antivirus"
         ],
         "a": 0
       },
       {
-        "q": "Browser serve per:",
+        "q": "Safari è:",
         "options": [
-          "Navigare",
-          "Cancellare RAM",
-          "Fare virus"
+          "Browser",
+          "File Word",
+          "Router"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Internet, web, browser e motori di ricerca: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "date": "Modulo 13",
+    "title": "Posta elettronica, cloud e netiquette",
+    "area": "Internet",
+    "goal": "Usare email e cloud in modo corretto.",
+    "theory": [
+      "La posta elettronica permette di inviare messaggi e allegati",
+      "Un indirizzo email contiene nome utente, chiocciola e dominio",
+      "Il cloud permette di salvare file online e sincronizzarli tra dispositivi",
+      "La netiquette è l'insieme delle regole di comportamento corretto online."
+    ],
+    "detail": [
+      "La posta elettronica permette di inviare messaggi e allegati. Un indirizzo email contiene nome utente, chiocciola e dominio. Il cloud permette di salvare file online e sincronizzarli tra dispositivi. La netiquette è l'insieme delle regole di comportamento corretto online.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
+    ],
+    "map": [
+      "EMAIL",
+      "Mittente",
+      "Destinatario",
+      "Oggetto",
+      "Allegato",
+      "Cloud",
+      "Netiquette"
+    ],
+    "oral": [
+      [
+        "Spiega: EMAIL",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Mittente",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Destinatario",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Oggetto",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Allegato",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Cloud",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Email serve a:",
+        "options": [
+          "Inviare messaggi digitali",
+          "Fare solo grafici",
+          "Aumentare RAM"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Oggetto email indica:",
+        "options": [
+          "Argomento del messaggio",
+          "Password",
+          "Nome CPU"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Allegato è:",
+        "options": [
+          "File inviato con email",
+          "Cavo",
+          "Virus sempre"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Cloud serve a:",
+        "options": [
+          "Salvare e sincronizzare online",
+          "Spegnere PC",
+          "Stampare"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Netiquette è:",
+        "options": [
+          "Regole di comportamento online",
+          "Tipo di memoria",
+          "Sistema operativo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "CC in email serve a:",
+        "options": [
+          "Mettere destinatari in copia",
+          "Cancellare computer",
+          "Creare grafico"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Dominio email è dopo:",
+        "options": [
+          "@",
+          "=",
+          "."
+        ],
+        "a": 0
+      },
+      {
+        "q": "Posta elettronica, cloud e netiquette: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -1514,107 +2152,165 @@ const LESSONS = [
   },
   {
     "id": 14,
-    "date": "27 giugno",
-    "title": "Motori di Ricerca",
+    "date": "Modulo 14",
+    "title": "Reti: LAN, WAN, modem, router e Wi-Fi",
     "area": "Internet",
-    "goal": "Studiare: Motori di Ricerca.",
+    "goal": "Capire le reti informatiche di base.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "Una rete collega più dispositivi per scambiare dati",
+      "Una LAN è una rete locale, per esempio a scuola o in casa",
+      "Una WAN collega reti lontane; Internet è la WAN più grande",
+      "Il modem collega alla linea del provider; il router distribuisce la connessione ai dispositivi",
+      "Il Wi-Fi è connessione senza fili."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
+      "Una rete collega più dispositivi per scambiare dati. Una LAN è una rete locale, per esempio a scuola o in casa. Una WAN collega reti lontane; Internet è la WAN più grande. Il modem collega alla linea del provider; il router distribuisce la connessione ai dispositivi. Il Wi-Fi è connessione senza fili.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
+      "RETI",
+      "LAN locale",
+      "WAN ampia",
+      "Internet",
+      "Modem",
+      "Router",
+      "Wi-Fi"
     ],
     "oral": [
       [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
+        "Spiega: RETI",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Se ti blocchi:",
-        "Respiri e riparti"
+        "Spiega: LAN locale",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Per DSA è utile:",
-        "Mappa concettuale"
+        "Spiega: WAN ampia",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Risposta deve essere:",
-        "Chiara"
+        "Spiega: Internet",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Esempio pratico aiuta?",
-        "Sì"
+        "Spiega: Modem",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Formula utile:",
-        "È… serve a… per esempio…"
+        "Spiega: Router",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Metodo migliore:",
+        "q": "LAN significa:",
         "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
+          "Rete locale",
+          "Rete mondiale sempre",
+          "File Word"
         ],
         "a": 0
       },
       {
-        "q": "Se ti blocchi:",
+        "q": "WAN significa:",
         "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
+          "Rete geografica ampia",
+          "Mouse",
+          "Formula"
         ],
         "a": 0
       },
       {
-        "q": "Per DSA è utile:",
+        "q": "Router serve a:",
         "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
+          "Distribuire connessione",
+          "Scrivere testo",
+          "Fare media"
         ],
         "a": 0
       },
       {
-        "q": "Risposta deve essere:",
+        "q": "Modem collega:",
         "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
+          "Alla linea internet del provider",
+          "Al cestino",
+          "Alla stampante soltanto"
         ],
         "a": 0
       },
       {
-        "q": "Esempio pratico aiuta?",
+        "q": "Wi-Fi è:",
         "options": [
-          "Sì",
-          "No",
-          "Mai"
+          "Connessione senza fili",
+          "Cavo obbligatorio",
+          "Virus"
         ],
         "a": 0
       },
       {
-        "q": "Formula utile:",
+        "q": "Internet è esempio di:",
         "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "WAN grandissima",
+          "Singola cartella",
+          "App Word"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una rete permette:",
+        "options": [
+          "Scambio dati",
+          "Solo stampa locale",
+          "Solo spegnimento"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Reti: LAN, WAN, modem, router e Wi-Fi: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -1622,225 +2318,102 @@ const LESSONS = [
   },
   {
     "id": 15,
-    "date": "28 giugno",
-    "title": "Posta Elettronica",
-    "area": "Internet",
-    "goal": "Studiare: Posta Elettronica.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "date": "29 giugno",
-    "title": "Sicurezza Informatica",
+    "date": "Modulo 15",
+    "title": "Sicurezza informatica: password, backup e phishing",
     "area": "Sicurezza",
-    "goal": "Studiare: Sicurezza Informatica.",
+    "goal": "Proteggere account, dati e dispositivi.",
     "theory": [
-      "La sicurezza informatica protegge computer, account e dati personali.",
-      "Una password sicura è lunga, difficile e diversa per ogni servizio.",
-      "Gli aggiornamenti correggono problemi di sicurezza.",
-      "Bisogna evitare link sospetti, email strane e allegati non richiesti."
+      "La sicurezza informatica protegge dati, dispositivi e persone",
+      "Una password sicura è lunga, non ovvia e diversa per ogni servizio",
+      "Il backup è una copia di sicurezza",
+      "Il phishing è un inganno: un messaggio falso cerca di rubare password o dati",
+      "Non bisogna cliccare link sospetti."
     ],
     "detail": [
-      "La sicurezza serve a evitare furti di dati, virus e truffe.",
-      "Una password come 123456 è debole; meglio una password lunga e non prevedibile.",
-      "Il phishing è una truffa che finge di essere un messaggio vero per rubare dati.",
-      "Parole chiave: password, antivirus, backup, aggiornamenti, phishing."
+      "La sicurezza informatica protegge dati, dispositivi e persone. Una password sicura è lunga, non ovvia e diversa per ogni servizio. Il backup è una copia di sicurezza. Il phishing è un inganno: un messaggio falso cerca di rubare password o dati. Non bisogna cliccare link sospetti.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
       "SICUREZZA",
-      "Password sicura",
-      "Antivirus",
-      "Aggiornamenti",
+      "Password",
       "Backup",
-      "Phishing"
+      "Phishing",
+      "Link sospetti",
+      "Dati personali",
+      "Protezione"
     ],
     "oral": [
       [
-        "Sicurezza protegge:",
-        "Dati e dispositivi"
+        "Spiega: SICUREZZA",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Password sicura è:",
-        "Lunga e difficile"
+        "Spiega: Password",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Aggiornamenti:",
-        "Correggono problemi"
+        "Spiega: Backup",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Link sospetti:",
-        "Non aprirli"
+        "Spiega: Phishing",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Phishing è:",
-        "Truffa online"
+        "Spiega: Link sospetti",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Antivirus serve a:",
-        "Proteggere da malware"
+        "Spiega: Dati personali",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Sicurezza protegge:",
+        "q": "Password sicura deve essere:",
         "options": [
-          "Dati e dispositivi",
-          "Solo stampanti",
-          "Solo mouse"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Password sicura è:",
-        "options": [
-          "Lunga e difficile",
-          "1234",
-          "Nome"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Aggiornamenti:",
-        "options": [
-          "Correggono problemi",
-          "Sono immagini",
-          "Non servono"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Link sospetti:",
-        "options": [
-          "Non aprirli",
-          "Aprirli subito",
-          "Condividerli"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Phishing è:",
-        "options": [
-          "Truffa online",
-          "Grafico",
-          "Periferica"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Antivirus serve a:",
-        "options": [
-          "Proteggere da malware",
-          "Scrivere testi",
-          "Fare slide"
+          "Lunga e non ovvia",
+          "123456",
+          "Nome proprio"
         ],
         "a": 0
       },
       {
         "q": "Backup è:",
         "options": [
-          "Copia sicurezza",
-          "Mouse",
-          "Monitor"
+          "Copia di sicurezza",
+          "Virus",
+          "Browser"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Phishing è:",
+        "options": [
+          "Inganno per rubare dati",
+          "Formula Excel",
+          "Tipo di grafico"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Link sospetto:",
+        "options": [
+          "Meglio non cliccare",
+          "Va sempre aperto",
+          "È sempre sicuro"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Password diverse servono a:",
+        "options": [
+          "Limitare danni se una viene rubata",
+          "Confondere Excel",
+          "Stampare"
         ],
         "a": 0
       },
@@ -1848,8 +2421,228 @@ const LESSONS = [
         "q": "Dati personali:",
         "options": [
           "Vanno protetti",
-          "Si pubblicano sempre",
-          "Sono inutili"
+          "Vanno pubblicati sempre",
+          "Sono hardware"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Autenticazione a due fattori:",
+        "options": [
+          "Aumenta sicurezza",
+          "Cancella file",
+          "È una tabella"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Sicurezza informatica: password, backup e phishing: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
+        ],
+        "a": 0
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "date": "Modulo 16",
+    "title": "Virus, malware, antivirus e privacy",
+    "area": "Sicurezza",
+    "goal": "Riconoscere i rischi principali e comportarsi con prudenza.",
+    "theory": [
+      "Malware significa software dannoso",
+      "Il virus è un tipo di malware che può danneggiare file o sistema",
+      "L'antivirus aiuta a rilevare e bloccare minacce",
+      "La privacy riguarda la protezione dei dati personali",
+      "Online bisogna condividere meno informazioni possibili e usare fonti affidabili."
+    ],
+    "detail": [
+      "Malware significa software dannoso. Il virus è un tipo di malware che può danneggiare file o sistema. L'antivirus aiuta a rilevare e bloccare minacce. La privacy riguarda la protezione dei dati personali. Online bisogna condividere meno informazioni possibili e usare fonti affidabili.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
+    ],
+    "map": [
+      "MALWARE",
+      "Virus",
+      "Antivirus",
+      "Aggiornamenti",
+      "Privacy",
+      "Dati personali",
+      "Prudenza"
+    ],
+    "oral": [
+      [
+        "Spiega: MALWARE",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Virus",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Antivirus",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Aggiornamenti",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Privacy",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ],
+      [
+        "Spiega: Dati personali",
+        "Risposta: definizione semplice, funzione ed esempio."
+      ]
+    ],
+    "quiz": [
+      {
+        "q": "Malware significa:",
+        "options": [
+          "Software dannoso",
+          "Hardware veloce",
+          "Documento Word"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Virus è:",
+        "options": [
+          "Tipo di malware",
+          "Browser",
+          "Cella"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Antivirus aiuta a:",
+        "options": [
+          "Bloccare minacce",
+          "Fare tabelle",
+          "Scrivere titoli"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Aggiornamenti servono anche per:",
+        "options": [
+          "Correggere problemi di sicurezza",
+          "Cancellare sempre tutto",
+          "Stampare meglio"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Privacy riguarda:",
+        "options": [
+          "Protezione dati personali",
+          "Velocità CPU",
+          "Margini pagina"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Scaricare da siti sconosciuti:",
+        "options": [
+          "Può essere rischioso",
+          "È sempre sicuro",
+          "È obbligatorio"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un allegato sospetto:",
+        "options": [
+          "Non va aperto con leggerezza",
+          "Va aperto subito",
+          "È sempre immagine"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Virus, malware, antivirus e privacy: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -1857,107 +2650,165 @@ const LESSONS = [
   },
   {
     "id": 17,
-    "date": "30 giugno",
-    "title": "Virus e Malware",
-    "area": "Sicurezza",
-    "goal": "Studiare: Virus e Malware.",
+    "date": "Modulo 17",
+    "title": "Algoritmi: sequenza, input, elaborazione, output",
+    "area": "Logica",
+    "goal": "Capire cos'è un algoritmo e descrivere procedure ordinate.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "Un algoritmo è una sequenza ordinata di istruzioni per risolvere un problema",
+      "Deve essere chiaro, finito e preciso",
+      "Spesso ha input, elaborazione e output",
+      "Input sono i dati iniziali; elaborazione sono le operazioni; output è il risultato",
+      "Anche una ricetta è un algoritmo."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
+      "Un algoritmo è una sequenza ordinata di istruzioni per risolvere un problema. Deve essere chiaro, finito e preciso. Spesso ha input, elaborazione e output. Input sono i dati iniziali; elaborazione sono le operazioni; output è il risultato. Anche una ricetta è un algoritmo.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
+      "ALGORITMO",
+      "Istruzioni ordinate",
+      "Input",
+      "Elaborazione",
+      "Output",
+      "Finito",
+      "Preciso"
     ],
     "oral": [
       [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
+        "Spiega: ALGORITMO",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Se ti blocchi:",
-        "Respiri e riparti"
+        "Spiega: Istruzioni ordinate",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Per DSA è utile:",
-        "Mappa concettuale"
+        "Spiega: Input",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Risposta deve essere:",
-        "Chiara"
+        "Spiega: Elaborazione",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Esempio pratico aiuta?",
-        "Sì"
+        "Spiega: Output",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Formula utile:",
-        "È… serve a… per esempio…"
+        "Spiega: Finito",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Metodo migliore:",
+        "q": "Algoritmo è:",
         "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
+          "Sequenza ordinata di istruzioni",
+          "Computer fisico",
+          "Virus"
         ],
         "a": 0
       },
       {
-        "q": "Se ti blocchi:",
+        "q": "Input sono:",
         "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
+          "Dati iniziali",
+          "Risultato finale",
+          "Monitor"
         ],
         "a": 0
       },
       {
-        "q": "Per DSA è utile:",
+        "q": "Output è:",
         "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
+          "Risultato",
+          "Dati iniziali sempre",
+          "CPU"
         ],
         "a": 0
       },
       {
-        "q": "Risposta deve essere:",
+        "q": "Elaborazione è:",
         "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
+          "Operazioni sui dati",
+          "Stampante",
+          "Browser"
         ],
         "a": 0
       },
       {
-        "q": "Esempio pratico aiuta?",
+        "q": "Un algoritmo deve essere:",
         "options": [
-          "Sì",
-          "No",
-          "Mai"
+          "Finito e preciso",
+          "Infinito e confuso",
+          "Senza ordine"
         ],
         "a": 0
       },
       {
-        "q": "Formula utile:",
+        "q": "Una ricetta è esempio di:",
         "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "Algoritmo",
+          "Hardware",
+          "Malware"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Sequenza corretta:",
+        "options": [
+          "Input-elaborazione-output",
+          "Output-input-cestino",
+          "RAM-Google-stampa"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Algoritmi: sequenza, input, elaborazione, output: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -1965,107 +2816,165 @@ const LESSONS = [
   },
   {
     "id": 18,
-    "date": "1 luglio",
-    "title": "Backup e Cloud",
-    "area": "Sicurezza",
-    "goal": "Studiare: Backup e Cloud.",
+    "date": "Modulo 18",
+    "title": "Diagrammi di flusso: simboli e decisioni",
+    "area": "Logica",
+    "goal": "Rappresentare algoritmi con simboli semplici.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "Il diagramma di flusso rappresenta un algoritmo con simboli",
+      "Ovale indica inizio e fine",
+      "Parallelogramma indica input o output",
+      "Rettangolo indica elaborazione",
+      "Rombo indica decisione, cioè una domanda con due strade: sì o no",
+      "Le frecce mostrano l'ordine delle operazioni."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
+      "Il diagramma di flusso rappresenta un algoritmo con simboli. Ovale indica inizio e fine. Parallelogramma indica input o output. Rettangolo indica elaborazione. Rombo indica decisione, cioè una domanda con due strade: sì o no. Le frecce mostrano l'ordine delle operazioni.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
+      "FLOW CHART",
+      "Ovale inizio/fine",
+      "Parallelogramma input/output",
+      "Rettangolo elaborazione",
+      "Rombo decisione",
+      "Frecce"
     ],
     "oral": [
       [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
+        "Spiega: FLOW CHART",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Se ti blocchi:",
-        "Respiri e riparti"
+        "Spiega: Ovale inizio/fine",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Per DSA è utile:",
-        "Mappa concettuale"
+        "Spiega: Parallelogramma input/output",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Risposta deve essere:",
-        "Chiara"
+        "Spiega: Rettangolo elaborazione",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Esempio pratico aiuta?",
-        "Sì"
+        "Spiega: Rombo decisione",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Formula utile:",
-        "È… serve a… per esempio…"
+        "Spiega: Frecce",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Metodo migliore:",
+        "q": "Ovale indica:",
         "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
+          "Inizio/Fine",
+          "Decisione",
+          "Input"
         ],
         "a": 0
       },
       {
-        "q": "Se ti blocchi:",
+        "q": "Rettangolo indica:",
         "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
+          "Elaborazione",
+          "Fine",
+          "Email"
         ],
         "a": 0
       },
       {
-        "q": "Per DSA è utile:",
+        "q": "Rombo indica:",
         "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
+          "Decisione",
+          "Stampa",
+          "Memoria"
         ],
         "a": 0
       },
       {
-        "q": "Risposta deve essere:",
+        "q": "Parallelogramma indica:",
         "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
+          "Input/Output",
+          "Virus",
+          "Router"
         ],
         "a": 0
       },
       {
-        "q": "Esempio pratico aiuta?",
+        "q": "Frecce indicano:",
         "options": [
-          "Sì",
-          "No",
-          "Mai"
+          "Ordine del flusso",
+          "Password",
+          "Dimensione file"
         ],
         "a": 0
       },
       {
-        "q": "Formula utile:",
+        "q": "Decisione ha spesso:",
         "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "Sì/No",
+          "Solo forse",
+          "Nessuna uscita"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Diagramma di flusso serve a:",
+        "options": [
+          "Rappresentare algoritmo",
+          "Fare antivirus",
+          "Scrivere romanzo"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Diagrammi di flusso: simboli e decisioni: qual è l'idea principale?",
+        "options": [
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Una risposta orale efficace deve essere:",
+        "options": [
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Per studiare da zero conviene:",
+        "options": [
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Un errore tipico è:",
+        "options": [
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
+        ],
+        "a": 0
+      },
+      {
+        "q": "Quando non ricordi tutto devi:",
+        "options": [
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -2073,107 +2982,100 @@ const LESSONS = [
   },
   {
     "id": 19,
-    "date": "2 luglio",
-    "title": "Privacy e Cittadinanza Digitale",
-    "area": "Sicurezza",
-    "goal": "Studiare: Privacy e Cittadinanza Digitale.",
+    "date": "Modulo 19",
+    "title": "Ripasso pratico Office: Word, Excel e PowerPoint",
+    "area": "Ripasso",
+    "goal": "Allenarsi sugli esercizi pratici più probabili.",
     "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
+      "Nel ripasso pratico bisogna saper creare un documento Word, una tabella Excel con formule e una presentazione PowerPoint",
+      "La prova può chiedere di formattare testo, inserire tabella, calcolare somma o media, creare un grafico e preparare slide ordinate",
+      "L'obiettivo è lavorare con calma e salvare spesso."
     ],
     "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
+      "Nel ripasso pratico bisogna saper creare un documento Word, una tabella Excel con formule e una presentazione PowerPoint. La prova può chiedere di formattare testo, inserire tabella, calcolare somma o media, creare un grafico e preparare slide ordinate. L'obiettivo è lavorare con calma e salvare spesso.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
+      "RIPASSO OFFICE",
+      "Word documento",
+      "Excel formule",
+      "Grafico",
+      "PowerPoint slide",
+      "Salva",
+      "Controlla"
     ],
     "oral": [
       [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
+        "Spiega: RIPASSO OFFICE",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Se ti blocchi:",
-        "Respiri e riparti"
+        "Spiega: Word documento",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Per DSA è utile:",
-        "Mappa concettuale"
+        "Spiega: Excel formule",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Risposta deve essere:",
-        "Chiara"
+        "Spiega: Grafico",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Esempio pratico aiuta?",
-        "Sì"
+        "Spiega: PowerPoint slide",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Formula utile:",
-        "È… serve a… per esempio…"
+        "Spiega: Salva",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Metodo migliore:",
+        "q": "Ripasso pratico Office: Word, Excel e PowerPoint: qual è l'idea principale?",
         "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
         ],
         "a": 0
       },
       {
-        "q": "Se ti blocchi:",
+        "q": "Una risposta orale efficace deve essere:",
         "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
         ],
         "a": 0
       },
       {
-        "q": "Per DSA è utile:",
+        "q": "Per studiare da zero conviene:",
         "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
         ],
         "a": 0
       },
       {
-        "q": "Risposta deve essere:",
+        "q": "Un errore tipico è:",
         "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
         ],
         "a": 0
       },
       {
-        "q": "Esempio pratico aiuta?",
+        "q": "Quando non ricordi tutto devi:",
         "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
@@ -2181,884 +3083,103 @@ const LESSONS = [
   },
   {
     "id": 20,
-    "date": "3 luglio",
-    "title": "Informatica in Agricoltura",
-    "area": "Agraria",
-    "goal": "Studiare: Informatica in Agricoltura.",
+    "date": "Modulo 20",
+    "title": "Simulazione esame Sereni: domande miste",
+    "area": "Esame",
+    "goal": "Ripassare tutti gli argomenti con domande miste.",
     "theory": [
-      "L'informatica è utile in agricoltura.",
-      "Permette di registrare dati su produzioni, costi, magazzino, terreni e trattamenti.",
-      "Excel può creare tabelle e grafici.",
-      "Sensori e stazioni meteo raccolgono dati su temperatura, umidità e pioggia.",
-      "L'agricoltura di precisione usa dati, GPS e tecnologie per ridurre sprechi."
+      "La simulazione d'esame serve a controllare la preparazione",
+      "Le domande possono essere teoriche, pratiche o di ragionamento",
+      "Conviene rispondere con frasi semplici: definizione, funzione, esempio",
+      "Se una domanda sembra difficile, partire dalle parole chiave e fare un esempio pratico."
     ],
     "detail": [
-      "Nell'istituto agrario l'informatica serve per gestire dati agricoli reali.",
-      "Un'azienda agricola può registrare spese, semine, concimi, trattamenti e raccolti.",
-      "I sensori misurano condizioni ambientali; il GPS aiuta a localizzare e lavorare con precisione.",
-      "Risposta orale pronta: l'informatica aiuta l'agricoltura a raccogliere dati, fare calcoli e prendere decisioni migliori."
+      "La simulazione d'esame serve a controllare la preparazione. Le domande possono essere teoriche, pratiche o di ragionamento. Conviene rispondere con frasi semplici: definizione, funzione, esempio. Se una domanda sembra difficile, partire dalle parole chiave e fare un esempio pratico.",
+      "Parola chiave: usa sempre definizione, funzione ed esempio pratico.",
+      "Per Arianna: non serve imparare frasi difficili; serve riconoscere i termini e spiegarli con parole semplici.",
+      "Errore tipico: confondere nomi simili. Rileggi la mappa e ripeti ad alta voce.",
+      "Esempio per l'orale: 'È..., serve a..., per esempio...'."
     ],
     "map": [
-      "AGRICOLTURA DIGITALE",
-      "Dati aziendali",
+      "ESAME",
+      "Definizione",
+      "Funzione",
+      "Esempio",
+      "Word",
       "Excel",
-      "Sensori",
-      "Meteo",
-      "GPS",
-      "Precisione"
+      "Internet",
+      "Sicurezza",
+      "Algoritmi"
     ],
     "oral": [
       [
-        "Informatica in agraria serve per:",
-        "Dati e organizzazione"
+        "Spiega: ESAME",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Excel aiuta con:",
-        "Tabelle e grafici"
+        "Spiega: Definizione",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Sensori misurano:",
-        "Temperatura e umidità"
+        "Spiega: Funzione",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "GPS serve a:",
-        "Localizzare"
+        "Spiega: Esempio",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Agricoltura di precisione usa:",
-        "Dati e tecnologia"
+        "Spiega: Word",
+        "Risposta: definizione semplice, funzione ed esempio."
       ],
       [
-        "Dato agricolo può essere:",
-        "Pioggia"
+        "Spiega: Excel",
+        "Risposta: definizione semplice, funzione ed esempio."
       ]
     ],
     "quiz": [
       {
-        "q": "Informatica in agraria serve per:",
+        "q": "Simulazione esame Sereni: domande miste: qual è l'idea principale?",
         "options": [
-          "Dati e organizzazione",
-          "Solo videogiochi",
-          "Solo stampare"
+          "Capire il concetto e fare un esempio",
+          "Imparare parole a caso",
+          "Non salvare mai"
         ],
         "a": 0
       },
       {
-        "q": "Excel aiuta con:",
+        "q": "Una risposta orale efficace deve essere:",
         "options": [
-          "Tabelle e grafici",
-          "Solo video",
-          "Solo email"
+          "Chiara, breve e con esempio",
+          "Lunghissima e confusa",
+          "Senza parole chiave"
         ],
         "a": 0
       },
       {
-        "q": "Sensori misurano:",
+        "q": "Per studiare da zero conviene:",
         "options": [
-          "Temperatura e umidità",
-          "Solo parole",
-          "Solo colori"
+          "Usare mappa, esempio e quiz",
+          "Saltare la teoria",
+          "Leggere una volta sola"
         ],
         "a": 0
       },
       {
-        "q": "GPS serve a:",
+        "q": "Un errore tipico è:",
         "options": [
-          "Localizzare",
-          "Scrivere testi",
-          "Fare virus"
+          "Confondere termini simili",
+          "Fare esempi pratici",
+          "Salvare spesso"
         ],
         "a": 0
       },
       {
-        "q": "Agricoltura di precisione usa:",
+        "q": "Quando non ricordi tutto devi:",
         "options": [
-          "Dati e tecnologia",
-          "Solo carta",
-          "Solo penna"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Dato agricolo può essere:",
-        "options": [
-          "Pioggia",
-          "Password rubata",
-          "Mouse"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Tecnologia può ridurre:",
-        "options": [
-          "Sprechi",
-          "Studio",
-          "Responsabilità"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Stazione meteo misura:",
-        "options": [
-          "Dati meteo",
-          "File Word",
-          "Virus"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 21,
-    "date": "4 luglio",
-    "title": "Ripasso Office",
-    "area": "Ripasso",
-    "goal": "Studiare: Ripasso Office.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 22,
-    "date": "5 luglio",
-    "title": "Ripasso Internet e Sicurezza",
-    "area": "Ripasso",
-    "goal": "Studiare: Ripasso Internet e Sicurezza.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 23,
-    "date": "6 luglio",
-    "title": "Interrogazione Simulata 1",
-    "area": "Esame",
-    "goal": "Studiare: Interrogazione Simulata 1.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 24,
-    "date": "7 luglio",
-    "title": "Interrogazione Simulata 2",
-    "area": "Esame",
-    "goal": "Studiare: Interrogazione Simulata 2.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 25,
-    "date": "8 luglio",
-    "title": "Ripasso Generale",
-    "area": "Esame",
-    "goal": "Studiare: Ripasso Generale.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 26,
-    "date": "9 luglio",
-    "title": "Simulazione Finale",
-    "area": "Esame",
-    "goal": "Studiare: Simulazione Finale.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
-        ],
-        "a": 0
-      }
-    ]
-  },
-  {
-    "id": 27,
-    "date": "10 luglio",
-    "title": "Ripasso Leggero e Serenità",
-    "area": "Esame",
-    "goal": "Studiare: Ripasso Leggero e Serenità.",
-    "theory": [
-      "Leggi la mappa e prova a spiegare l'argomento con parole semplici.",
-      "Usa sempre un esempio pratico.",
-      "Per l'interrogazione non serve parlare difficile: serve rispondere in modo chiaro.",
-      "Se ti blocchi, respira e riparti da una parola chiave."
-    ],
-    "detail": [
-      "Metodo consigliato: definizione breve, esempio, parola chiave.",
-      "Formula utile: “È… serve a… per esempio…”",
-      "Per DSA è meglio ripetere risposte brevi più volte, non memorizzare pagine intere.",
-      "Se l'argomento è un ripasso, concentrati sugli errori fatti nei quiz."
-    ],
-    "map": [
-      "MAPPA",
-      "Parola chiave",
-      "Definizione semplice",
-      "Esempio pratico",
-      "Risposta orale"
-    ],
-    "oral": [
-      [
-        "Metodo migliore:",
-        "Frasi semplici + esempio"
-      ],
-      [
-        "Se ti blocchi:",
-        "Respiri e riparti"
-      ],
-      [
-        "Per DSA è utile:",
-        "Mappa concettuale"
-      ],
-      [
-        "Risposta deve essere:",
-        "Chiara"
-      ],
-      [
-        "Esempio pratico aiuta?",
-        "Sì"
-      ],
-      [
-        "Formula utile:",
-        "È… serve a… per esempio…"
-      ]
-    ],
-    "quiz": [
-      {
-        "q": "Metodo migliore:",
-        "options": [
-          "Frasi semplici + esempio",
-          "Parole difficili",
-          "Stare zitti"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Se ti blocchi:",
-        "options": [
-          "Respiri e riparti",
-          "Ti arrendi",
-          "Cambi materia"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Per DSA è utile:",
-        "options": [
-          "Mappa concettuale",
-          "Studiare 4 ore",
-          "Imparare tutto a memoria"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Risposta deve essere:",
-        "options": [
-          "Chiara",
-          "Lunghissima",
-          "Confusa"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Esempio pratico aiuta?",
-        "options": [
-          "Sì",
-          "No",
-          "Mai"
-        ],
-        "a": 0
-      },
-      {
-        "q": "Formula utile:",
-        "options": [
-          "È… serve a… per esempio…",
-          "Non so",
-          "Forse"
+          "Partire dalla parola chiave",
+          "Inventare senza senso",
+          "Chiudere l'app"
         ],
         "a": 0
       }
